@@ -40,7 +40,7 @@ export default function MeditationHeader() {
           <div className="flex items-center justify-between">
             {/* Left menu item - Hidden on mobile */}
             <Link
-              href="/meditate"
+              href="/"
               className="hidden md:flex flex-col items-center gap-2 hover:opacity-80 transition-opacity"
             >
               <span className="text-sm font-light">Meditate</span>
