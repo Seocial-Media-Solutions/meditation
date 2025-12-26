@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import FAQFullList from '@/components/faq/FAQFullList';
 
 export default function FAQPage() {
@@ -9,7 +8,7 @@ export default function FAQPage() {
             <div className="relative pt-20   md:pt-40  bg-[#10551F] overflow-hidden">
 
 
-                {/* Bottom wave decoration - optional, using negative margin on next section or SVG here */}
+
             </div>
 
             {/* List Section */}

@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function YogaFAQPage() {
     const [openIndex, setOpenIndex] = useState(null);
@@ -78,12 +79,12 @@ export default function YogaFAQPage() {
                         src="/images/section-background.png"
                         alt="Background Pattern"
                         fill
-                        className="object-cover opacity-100" // Adjust opacity as needed, user didn't specify but usually backgrounds are subtle. Keeping 100 based on '100% m aae' interpretation or just standard.
+                        className="object-cover opacity-100"
                         priority
                     />
                 </div>
 
-                <div className="absolute  left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 md:w-64 md:h-64 opacity-100">
+                <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 md:w-64 md:h-64 opacity-100">
                     <Image
                         src="/images/flower-green.png"
                         alt=""
@@ -97,23 +98,45 @@ export default function YogaFAQPage() {
             <div className="relative z-10">
                 {/* Header Section */}
                 <div className="text-center pt-16 md:pt-36 pb-12 md:pb-16 px-4">
-                    <p className="text-sm md:text-base font-semibold text-[#4A6741] uppercase tracking-wider mb-4 font-sans">
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        className="text-sm md:text-base font-semibold text-[#4A6741] uppercase tracking-wider mb-4 font-sans"
+                    >
                         Quick Answers
-                    </p>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1A2E05] mb-6 font-serif">
+                    </motion.p>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false }}
+                        transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+                        className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1A2E05] mb-6 font-serif"
+                    >
                         FAQ Page
-                    </h1>
-                    <p className="text-base md:text-lg text-[#4A6741] max-w-2xl mx-auto font-sans">
+                    </motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false }}
+                        transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                        className="text-base md:text-lg text-[#4A6741] max-w-2xl mx-auto font-sans"
+                    >
                         Find answers to commonly asked questions about meditation, self-realization, and our classes
-                    </p>
+                    </motion.p>
                 </div>
 
                 {/* FAQ Section */}
                 <div className="max-w-7xl mx-auto px-4 pb-20">
                     <div className="space-y-4 md:space-y-5">
                         {faqs.map((faq, index) => (
-                            <div
+                            <motion.div
                                 key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: false }}
+                                transition={{ duration: 0.6, delay: 0.05 * index, ease: "easeOut" }}
                                 className="bg-[#F7F8ED] rounded-2xl md:rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-gray-100"
                             >
                                 <button
@@ -148,12 +171,18 @@ export default function YogaFAQPage() {
                                         </p>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
 
                     {/* Bottom CTA Section */}
-                    <div className="mt-16 md:mt-20 bg-[#10551F] rounded-3xl md:rounded-[2.5rem] p-8 md:p-12 text-center shadow-xl relative overflow-hidden">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: false }}
+                        transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+                        className="mt-16 md:mt-20 bg-[#10551F] rounded-3xl md:rounded-[2.5rem] p-8 md:p-12 text-center shadow-xl relative overflow-hidden"
+                    >
                         {/* Decorative Elements */}
                         <div className="absolute top-0 left-0 w-32 h-32 opacity-10">
                             <Image
@@ -186,7 +215,7 @@ export default function YogaFAQPage() {
                                 </span>
                             </button>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 

@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function OurStory() {
     return (
@@ -18,25 +21,53 @@ export default function OurStory() {
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     {/* Text Content */}
                     <div className="space-y-8">
-                        <h2 className="text-4xl lg:text-5xl font-serif text-[#1A2E05]">
+                        <motion.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                            className="text-4xl lg:text-5xl font-serif text-[#1A2E05]"
+                        >
                             From Personal Experience to a Universal Vision
-                        </h2>
+                        </motion.h2>
 
                         <div className="space-y-6 text-lg text-gray-600 font-light leading-relaxed">
-                            <p>
+                            <motion.p
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: false }}
+                                transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+                            >
                                 For over three decades, this journey has been shaped by direct experience rather than theory. What began as a personal exploration of meditation gradually unfolded into a deeper understanding of its profound impact — not only on individual wellbeing, but on relationships, communities, and society as a whole.
-                            </p>
-                            <p>
-                                Meditation revealed itself as more than a personal wellness practice. It became a practical path to inner balance, clarity, emotional stability, and a genuine sense of fulfillment — qualities increasingly needed in today’s fast-paced and divided world.
-                            </p>
-                            <p className="font-medium text-[#1A2E05]">
+                            </motion.p>
+                            <motion.p
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: false }}
+                                transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                            >
+                                Meditation revealed itself as more than a personal wellness practice. It became a practical path to inner balance, clarity, emotional stability, and a genuine sense of fulfillment — qualities increasingly needed in today's fast-paced and divided world.
+                            </motion.p>
+                            <motion.p
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: false }}
+                                transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+                                className="font-medium text-[#1A2E05]"
+                            >
                                 This platform exists to share that lived experience in a simple, accessible, and authentic way.
-                            </p>
+                            </motion.p>
                         </div>
                     </div>
 
                     {/* Image */}
-                    <div className="relative h-[600px] w-full rounded-2xl overflow-hidden shadow-xl bg-[#F7F8ED]">
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: false }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="relative h-[600px] w-full rounded-2xl overflow-hidden shadow-xl bg-[#F7F8ED]"
+                    >
                         <Image
                             src="/images/men-medatating.webp"
                             alt="Person walking in nature"
@@ -44,7 +75,7 @@ export default function OurStory() {
                             className="object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/10 to-transparent"></div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
