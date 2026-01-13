@@ -10,7 +10,7 @@ export default function AboutHero() {
             {/* Background Image */}
             <div className="absolute inset-0">
                 <Image
-                    src="/images/hero1.jpg"
+                    src="/images/gallery/slide1.jpeg"
                     alt="Peaceful meditation setting"
                     fill
                     className="object-cover"

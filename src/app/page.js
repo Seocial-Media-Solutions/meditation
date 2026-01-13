@@ -10,6 +10,10 @@ import SahajaYogaSection from "@/components/homepage/SahajaYogaSection";
 import TeacherSection from "@/components/homepage/TeacherSection";
 
 
+import TestimonialsSection from "@/components/homepage/TestimonialsSection";
+
+import GallerySection from "@/components/homepage/GallerySection";
+
 export default function Home() {
   return (
     <>
@@ -21,6 +25,8 @@ export default function Home() {
       <EverydayLifeSection />
       <TeacherSection />
       <SahajaYogaSection />
+      <TestimonialsSection />
+      <GallerySection />
       <CTASection />
       <YogaFAQSection />
     </>

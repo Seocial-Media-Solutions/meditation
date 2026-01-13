@@ -7,13 +7,16 @@ export default function Hero() {
   return (
     <section className="relative w-full h-screen">
       <Image
-        src="/images/hero.webp"
+        src="/images/hero.JPEG"
         alt="Meditation"
         fill
         priority
         className="object-cover"
         quality={90}
       />
+      {/* <video autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
+        <source src="/images/hero.mp4" type="video/mp4" />
+      </video> */}
 
       {/* Dark overlay for better text readability */}
       <div className="absolute inset-0 bg-black/20"></div>

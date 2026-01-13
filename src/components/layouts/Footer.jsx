@@ -38,26 +38,31 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/about" className="text-lg text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
-                                    About
+                                <Link href="/blog" className="text-lg text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
+                                    Blog
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/faq" className="text-lg text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
+                                    FAQs
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/services" className="text-lg text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
-                                    Services
+                                    Service
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/blog" className="text-lg text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
-                                    Blog
+                                <Link href="/about" className="text-lg text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
+                                    About
                                 </Link>
                             </li>
                         </ul>
                     </div>
 
-                    {/* Column 2: Resources */}
+                    {/* Column 2: Services */}
                     <div>
-                        <h4 className="text-base font-semibold mb-6 text-white uppercase tracking-wider">Resources</h4>
+                        <h4 className="text-base font-semibold mb-6 text-white uppercase tracking-wider">Services</h4>
                         <ul className="space-y-4">
                             <li>
                                 <Link href="/meditate-now" className="text-lg text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
@@ -87,12 +92,7 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/classes" className="text-lg text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
-                                    Classes Near Me
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/privacy" className="text-sm text-gray-400 font-light hover:text-[#C7DC49] transition-colors">
+                                <Link href="/privacy" className="text-lg text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
                                     Privacy Notice
                                 </Link>
                             </li>
