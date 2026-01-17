@@ -28,7 +28,7 @@ export default function OurStory() {
                             transition={{ duration: 0.6, ease: "easeOut" }}
                             className="text-4xl lg:text-5xl font-serif text-[#1A2E05]"
                         >
-                            From Personal Experience to a Universal Vision
+                            About the Author
                         </motion.h2>
 
                         <div className="space-y-6 text-lg text-gray-600 font-light leading-relaxed">
@@ -38,7 +38,7 @@ export default function OurStory() {
                                 viewport={{ once: false }}
                                 transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
                             >
-                                For over three decades, this journey has been shaped by direct experience rather than theory. What began as a personal exploration of meditation gradually unfolded into a deeper understanding of its profound impact — not only on individual wellbeing, but on relationships, communities, and society as a whole.
+                                Born in Viet Nam, from a Thai father and French mother, the author is a dual French-Thai national, brought up and educated in Switzerland and France. Trained as a journalist, she had been working for over 8 years in increasingly senior positions in national print and broadcast mass media in France and Thailand before joining an intergovernmental organization in the early 2000s.
                             </motion.p>
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}
@@ -46,7 +46,7 @@ export default function OurStory() {
                                 viewport={{ once: false }}
                                 transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
                             >
-                                Meditation revealed itself as more than a personal wellness practice. It became a practical path to inner balance, clarity, emotional stability, and a genuine sense of fulfillment — qualities increasingly needed in today's fast-paced and divided world.
+                                A practitioner of meditation since her teenage years, she has been practicing meditation on a daily basis for over 40 years, guiding meditation sessions and delivering meditation workshops for 30 years as a volunteer for non-profit organizations.
                             </motion.p>
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}
@@ -55,7 +55,7 @@ export default function OurStory() {
                                 transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
                                 className="font-medium text-[#1A2E05]"
                             >
-                                This platform exists to share that lived experience in a simple, accessible, and authentic way.
+                                She holds a Masters degree in Information and Communication, with a specialization in print mass media. She also holds a degree from the University of Hawaii East-West Center in Advocacy and Communication for Policy Makers, as well as diplomas in the field of knowledge management. Apart from meditation, she also holds a professional diploma in Indian classical dance (Bharat Natyam) and has been performing for live audiences in the Asia-Pacific region on a regular basis.
                             </motion.p>
                         </div>
                     </div>
