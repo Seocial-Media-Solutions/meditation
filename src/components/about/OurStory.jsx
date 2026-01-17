@@ -38,7 +38,7 @@ export default function OurStory() {
                                 viewport={{ once: false }}
                                 transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
                             >
-                                Born in Viet Nam, from a Thai father and French mother, the author is a dual French-Thai national, brought up and educated in Switzerland and France. Trained as a journalist, she had been working for over 8 years in increasingly senior positions in national print and broadcast mass media in France and Thailand before joining an intergovernmental organization in the early 2000s.
+                                Born in Viet Nam, from a Thai father and French mother, Wanphen L. Sreshthaputra (aka “Saraswati”) is a dual French-Thai national, brought up and educated in Switzerland and France. Trained as a journalist, she had been working for over 8 years in increasingly senior positions in national print and broadcast mass media in France and Thailand before joining an intergovernmental organization in the early 2000s.
                             </motion.p>
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}
