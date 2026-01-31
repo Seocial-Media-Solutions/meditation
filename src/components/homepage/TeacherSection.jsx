@@ -41,7 +41,7 @@ export default function TeacherSection() {
               className="inline-block"
             >
               <span className="text-sm font-semibold tracking-wider text-[#4A6741] uppercase bg-[#F7F8ED] px-4 py-2 rounded-full">
-                About the Teacher
+                About me
               </span>
             </motion.div>
 
@@ -67,9 +67,8 @@ export default function TeacherSection() {
                 transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
                 className="text-gray-600 leading-relaxed text-lg"
               >
-                With over <span className="font-medium text-[#1A2E05]">30 years of personal practice</span> and
-                global experience, the journey behind this work is rooted in authenticity, sincerity, and
-                lived experience rather than theory.
+                With <span className="font-medium text-[#1A2E05]">40 years of personal practice and global experience</span>, the journey behind this work is
+                rooted in authenticity, sincerity, and lived experience rather than theory.
               </motion.p>
 
               <motion.p
@@ -94,7 +93,7 @@ export default function TeacherSection() {
                 transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
                 className="text-center p-4 bg-white rounded-lg border border-gray-200 shadow-sm"
               >
-                <div className="text-3xl font-light text-gray-800 mb-1">30+</div>
+                <div className="text-3xl font-light text-gray-800 mb-1">40+</div>
                 <div className="text-sm text-gray-600">Years of Practice</div>
               </motion.div>
               <motion.div

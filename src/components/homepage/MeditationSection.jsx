@@ -47,8 +47,9 @@ export default function MeditationSection() {
               viewport={{ once: false }}
               transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
             >
-              Despite technological progress, stress, division, and dissatisfaction continue to grow.
-              Meditation offers a natural solution — not by escaping life, but by understanding it from within.
+              Despite rapid technological progress, stress, anxiety, division, and dissatisfaction continue to rise. We are more connected than ever — yet often disconnected from ourselves.
+              <br /><br />
+              Meditation offers a natural, grounded response. Not an escape from life — but a deeper understanding of it from within.
             </motion.p>
 
             <motion.div
@@ -57,19 +58,19 @@ export default function MeditationSection() {
               viewport={{ once: false }}
               transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
             >
-              <p className="mb-4">Through regular practice, meditation helps:</p>
+              <p className="mb-4">Through regular practice, meditation helps you:</p>
               <ul className="space-y-2 ml-6">
                 <li className="flex items-start">
                   <span className="text-gray-400 mr-3">•</span>
-                  <span>Calm the mind</span>
+                  <span>Calm mental turbulence</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-gray-400 mr-3">•</span>
-                  <span>Balance emotions</span>
+                  <span>Balance emotions naturally</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-gray-400 mr-3">•</span>
-                  <span>Improve focus and awareness</span>
+                  <span>Improve focus and clarity</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-gray-400 mr-3">•</span>
@@ -89,7 +90,7 @@ export default function MeditationSection() {
               transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
               className="italic"
             >
-              This is meditation not just for individuals — but for a better world.
+              This is meditation not only for personal wellbeing — but for creating a more balanced, compassionate world.
             </motion.p>
           </div>
 

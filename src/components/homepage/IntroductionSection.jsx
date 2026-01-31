@@ -36,7 +36,7 @@ export default function IntroductionSection() {
           transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
           className="text-3xl md:text-4xl text-center text-[#1A2E05] font-serif mb-8"
         >
-          A Gentle Path to Self-Realization
+          Through My Lens — A Personal Journey into Meditation
         </motion.h2>
 
         {/* Content */}
@@ -46,12 +46,9 @@ export default function IntroductionSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="text-lg md:text-xl leading-relaxed"
+            className="text-lg md:text-xl leading-relaxed italic font-medium"
           >
-            Meditation is more than relaxation. It is a journey inward — toward clarity,
-            balance, and genuine fulfillment. For over three decades, this meditation
-            practice has helped individuals across the world experience inner peace,
-            emotional stability, and a deeper connection with themselves.
+            Turn inward. Meditate. In today’s fast-paced, outward-driven world, this has become the need of the hour.
           </motion.p>
 
           <motion.p
@@ -61,10 +58,44 @@ export default function IntroductionSection() {
             transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
             className="text-lg md:text-xl leading-relaxed"
           >
-            Rooted in Sahaja Yoga meditation, this approach is simple, experiential,
-            and scientifically studied — offering real results for modern life without
-            effort or strain.
+            It has been over forty years since I first experienced the profound stillness of deep meditation. As a shy teenager growing up in the French suburbs of Geneva, I was introduced to Sahaja Yoga meditation by one of my high-school teachers, a colleague of my mother.
           </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+            className="text-lg md:text-xl leading-relaxed"
+          >
+            The effects were immediate and tangible — better sleep, sharper attention, and a quiet inner joy. What began as curiosity soon became a lifelong practice. I have never stopped since.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+            className="text-lg md:text-xl leading-relaxed"
+          >
+            Over the years, this practice has revealed layers of beauty, balance, and inner freedom — experiences too precious not to share.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+            className="text-lg md:text-xl leading-relaxed pt-4"
+          >
+            <p className="mb-4 font-serif text-[#1A2E05]">This space exists as:</p>
+            <ul className="space-y-2 inline-block text-left">
+              <li>• A repository of lived experience</li>
+              <li>• A place for short reflections and deeper narratives</li>
+              <li>• An avenue to connect, explore, and grow together</li>
+              <li>• A gentle introduction to meditation — even for skeptics</li>
+            </ul>
+          </motion.div>
         </div>
 
         {/* Bottom decorative divider with leaf */}

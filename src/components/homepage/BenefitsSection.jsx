@@ -5,6 +5,15 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function BenefitsSection() {
+  // Config for the benefits to map easily to the layout
+  const benefits = {
+    topLeft: { title: "Improved sleep and deep rest", description: "Wake up feeling refreshed and renewed." },
+    bottomLeft: { title: "Reduced stress and anxiety", description: "Find calm amidst the chaos of daily life." },
+    topRight: { title: "Enhanced emotional balance", description: "Restore natural harmony to your inner self." },
+    bottomRight: { title: "Sharper focus and mental clarity", description: "Achieve clarity and single-pointed attention." },
+    bottomCenter: { title: "Greater physical ease and vitality", description: "Feel more energetic and at ease in your body." }
+  };
+
   return (
     <div className="min-h-screen relative py-16 px-4 overflow-hidden">
       {/* Background Image */}
@@ -46,19 +55,19 @@ export default function BenefitsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-            className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#1A2E05] mb-2"
+            className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#1A2E05] mb-4"
           >
-            Transform your body, mind,
+            Transform Your Body, Mind & Life
           </motion.h1>
-          <motion.h1
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#1A2E05]"
+            className="text-lg text-gray-600 max-w-2xl mx-auto"
           >
-            and life
-          </motion.h1>
+            Meditation gently supports holistic wellbeing by working at the level of the nervous system and awareness.
+          </motion.p>
         </div>
 
         {/* Main Content Grid */}
@@ -73,7 +82,7 @@ export default function BenefitsSection() {
               className="text-center lg:text-right flex flex-col items-center lg:block"
             >
               <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-end gap-3 mb-3">
-                <h3 className="text-xl font-medium text-[#1A2E05] order-last lg:order-first">Boost overall wellness</h3>
+                <h3 className="text-xl font-medium text-[#1A2E05] order-last lg:order-first">{benefits.topLeft.title}</h3>
                 <div className="relative w-8 h-8 lg:w-6 lg:h-6 flex-shrink-0">
                   <Image
                     src="/images/icon-leaf.svg"
@@ -84,7 +93,7 @@ export default function BenefitsSection() {
                 </div>
               </div>
               <p className="text-gray-600 max-w-sm mx-auto lg:mx-0">
-                Yoga supports a healthy heart, improves circulation, and promotes better sleep.
+                {benefits.topLeft.description}
               </p>
             </motion.div>
 
@@ -96,7 +105,7 @@ export default function BenefitsSection() {
               className="text-center lg:text-right flex flex-col items-center lg:block"
             >
               <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-end gap-3 mb-3">
-                <h3 className="text-xl font-medium text-[#1A2E05] order-last lg:order-first">Find peace of mind</h3>
+                <h3 className="text-xl font-medium text-[#1A2E05] order-last lg:order-first">{benefits.bottomLeft.title}</h3>
                 <div className="relative w-8 h-8 lg:w-6 lg:h-6 flex-shrink-0">
                   <Image
                     src="/images/icon-leaf.svg"
@@ -107,7 +116,7 @@ export default function BenefitsSection() {
                 </div>
               </div>
               <p className="text-gray-600 max-w-sm mx-auto lg:mx-0">
-                Yoga combines breath control and mindfulness, which helps to reduce stress.
+                {benefits.bottomLeft.description}
               </p>
             </motion.div>
           </div>
@@ -139,7 +148,7 @@ export default function BenefitsSection() {
                 <div className="relative w-[210px] h-[280px] lg:w-[280px] lg:h-[380px]">
                   <Image
                     src="/images/yoga-girl.png"
-                    alt="Yoga Pose"
+                    alt="Meditation Pose"
                     fill
                     className="object-contain"
                     priority
@@ -167,10 +176,10 @@ export default function BenefitsSection() {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-medium text-[#1A2E05]">Promote general health</h3>
+                <h3 className="text-xl font-medium text-[#1A2E05]">{benefits.topRight.title}</h3>
               </div>
               <p className="text-gray-600 max-w-sm mx-auto lg:mx-0">
-                Yoga enhances flow, encourages better sleep, and supports a healthy heart.
+                {benefits.topRight.description}
               </p>
             </motion.div>
 
@@ -190,10 +199,10 @@ export default function BenefitsSection() {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-medium text-[#1A2E05]">Obtain mental peace</h3>
+                <h3 className="text-xl font-medium text-[#1A2E05]">{benefits.bottomRight.title}</h3>
               </div>
               <p className="text-gray-600 max-w-sm mx-auto lg:mx-0">
-                Yoga incorporates focus and breath awareness, which helps to lessen anxiety.
+                {benefits.bottomRight.description}
               </p>
             </motion.div>
           </div>
@@ -216,10 +225,10 @@ export default function BenefitsSection() {
                 className="object-contain"
               />
             </div>
-            <h3 className="text-xl font-medium text-[#1A2E05]">Move with ease</h3>
+            <h3 className="text-xl font-medium text-[#1A2E05]">{benefits.bottomCenter.title}</h3>
           </div>
           <p className="text-gray-600 max-w-md mx-auto">
-            You'll notice greater mobility, fewer aches, and better posture
+            {benefits.bottomCenter.description}
           </p>
         </motion.div>
       </div>

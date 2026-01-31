@@ -10,20 +10,20 @@ export default function YogaFAQSection() {
 
     const faqs = [
         {
-            question: "What is Yoga?",
-            answer: "The word Yoga literally means “union”. It is a state of connection between the Individual Self and the Divine Self. Yoga is a level of enlightened consciousness, leading to inner bliss, peace, and a feeling of complete relaxation and harmony."
+            question: "What is meditation, and how can it benefit me?",
+            answer: "Meditation is a practice that connects you with your inner self, helping to reduce stress, improve focus, and bring a deep sense of peace and balance to your daily life."
         },
         {
-            question: "What is Sahaja Yoga?",
-            answer: "“Sahaja” means in-born or effortless. Sahaja Yoga gives practitioners the ability to awaken their inner Kundalini energy, leading effortlessly to a deep state of peace and harmony, often from the very first session."
+            question: "Do I need prior experience to start?",
+            answer: "No, you do not need any prior experience. This practice is designed to be simple and effortless, accessible to everyone regardless of their background or previous knowledge."
         },
         {
-            question: "How is it different from other Yoga?",
-            answer: "Unlike other forms that focus on physical exercises, Sahaja Yoga begins with the awakening of the Kundalini energy. It is based on mental silence, allowing the positive effects to be fully imbibed without penances or extreme behavior."
+            question: "How is this different from other techniques?",
+            answer: "Unlike techniques that rely on concentration or mental effort, this approach uses your own inner energy to naturally and spontaneously bring you into a state of thoughtless awareness and deep peace."
         },
         {
-            question: "What are the benefits?",
-            answer: "Regular meditation brings a new dimension of awareness, making you healthier, calmer, and more balanced. It helps bring stress, fear, and worries under control, effectively improving physical and psychological well-being."
+            question: "What types of sessions do you offer?",
+            answer: "We provide a flexible learning journey with audio podcast guides, video sessions, and comprehensive written materials, allowing you to explore the practice in the format that works best for you."
         }
     ];
 
