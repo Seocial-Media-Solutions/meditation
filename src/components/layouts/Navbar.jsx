@@ -111,10 +111,10 @@ export default function MeditationHeader() {
               </li>
               <li>
                 <Link
-                  href="/faq"
+                  href="/about"
                   className="text-base font-light hover:text-black/80 transition-colors"
                 >
-                  FAQs
+                  About
                 </Link>
               </li>
               <li>
@@ -127,10 +127,10 @@ export default function MeditationHeader() {
               </li>
               <li>
                 <Link
-                  href="/about"
+                  href="/faq"
                   className="text-base font-light hover:text-black/80 transition-colors"
                 >
-                  About
+                  FAQs
                 </Link>
               </li>
             </ul>
@@ -178,9 +178,9 @@ export default function MeditationHeader() {
               {[
                 { href: '/', label: 'Home', delay: '100ms' },
                 { href: '/blog', label: 'Blog', delay: '200ms' },
-                { href: '/faq', label: 'FAQs', delay: '300ms' },
+                { href: '/about', label: 'About', delay: '300ms' },
                 { href: '/services', label: 'Service', delay: '400ms' },
-                { href: '/about', label: 'About', delay: '500ms' },
+                { href: '/faq', label: 'FAQs', delay: '500ms' },
                 { href: '/contact', label: 'Contact Us', delay: '600ms' },
               ].map((item, index) => (
                 <li
@@ -250,10 +250,10 @@ export default function MeditationHeader() {
             </li>
             <li>
               <Link
-                href="/faq"
+                href="/about"
                 className={`text-base font-light transition-colors ${isScrolled ? 'hover:text-gray-600' : 'hover:text-white/80'}`}
               >
-                FAQs
+                About
               </Link>
             </li>
             <li>
@@ -266,10 +266,10 @@ export default function MeditationHeader() {
             </li>
             <li>
               <Link
-                href="/about"
+                href="/faq"
                 className={`text-base font-light transition-colors ${isScrolled ? 'hover:text-gray-600' : 'hover:text-white/80'}`}
               >
-                About
+                FAQs
               </Link>
             </li>
           </ul>

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function TeacherSection() {
@@ -117,6 +118,22 @@ export default function TeacherSection() {
                 <div className="text-sm text-gray-600">Teaching</div>
               </motion.div>
             </div>
+
+            {/* Read More Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6, delay: 0.7, ease: "easeOut" }}
+              className="pt-6"
+            >
+              <Link href="/about" className="inline-flex items-center gap-2 group text-[#1A2E05] hover:text-[#4A6741] transition-colors duration-300">
+                <span className="font-medium tracking-wide text-lg border-b border-[#1A2E05]/30 group-hover:border-[#4A6741] pb-0.5 transition-all">
+                  Read More
+                </span>
+                <span className="transform group-hover:translate-x-1 transition-transform duration-300 text-xl">→</span>
+              </Link>
+            </motion.div>
           </div>
 
           {/* Image Section */}

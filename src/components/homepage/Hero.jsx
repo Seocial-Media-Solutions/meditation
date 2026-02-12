@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section className="relative w-full h-screen">
       <Image
-        src="/images/hero.JPEG"
+        src="/images/heroWall.jpeg"
         alt="Meditation"
         fill
         priority
@@ -34,7 +34,7 @@ export default function Hero() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-4xl md:text-5xl font-serif mb-6 leading-tight mt-20"
+          className="text-4xl md:text-5xl  font-serif mb-6 leading-tight mt-20"
         >
           Meditation for Inner Peace, Balance & Transformation
         </motion.h1>
@@ -60,9 +60,9 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
           className="flex flex-col sm:flex-row gap-4 items-center flex-wrap justify-center"
         >
-           <Link
+          <Link
             href="/start-journey"
-            className="px-8 py-4 bg-[#C7DC49] text-white rounded-full font-light text-base hover:bg-opacity-90 transition-colors flex items-center gap-2"
+            className="px-8 py-4 bg-[#C7DC49] text-gray-700 text-shadow-regal-blue rounded-full font-light text-base hover:bg-opacity-90 transition-colors flex items-center gap-2"
           >
             Start Your Meditation Journey
           </Link>
@@ -79,31 +79,22 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        <button
+        <div
           onClick={() => setIsJourneyOpen(true)}
-          className="
-    group mt-6 px-8 py-4
-    border border-[#C7DC49]/70
-    text-white text-base font-light
-    rounded-full
-    flex items-center gap-3
-    transition-all duration-300 ease-out
-    hover:border-[#C7DC49]
-    hover:bg-[#C7DC49]/10
-    focus:outline-none focus:ring-2 focus:ring-[#C7DC49]/40
-    cursor-pointer
-  "
+          className="mt-12 flex items-center gap-2 cursor-pointer group text-white hover:text-[#C7DC49] transition-colors duration-300"
         >
-          <span className="tracking-wide">Explore More</span>
+          <span className="text-lg font-light tracking-wide border-b border-transparent group-hover:border-[#C7DC49] transition-all">
+            Explore More
+          </span>
           <ArrowRight
-            size={18}
+            size={20}
             className="transition-transform duration-300 group-hover:translate-x-1"
           />
-        </button>
+        </div>
 
       </div>
 
       <JourneyOptions isOpen={isJourneyOpen} onClose={() => setIsJourneyOpen(false)} />
     </section>
-  );
+  )
 }
