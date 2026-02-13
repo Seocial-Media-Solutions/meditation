@@ -1,10 +1,14 @@
 'use client';
 
-import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import Modal from '../common/Modal';
+import ContactForm from '../contact/ContactForm';
 
 export default function CTASection() {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   return (
     <section className="py-16 px-4 bg-[#F7F8ED] relative overflow-hidden">
       {/* Background Flower Images */}
@@ -78,8 +82,11 @@ export default function CTASection() {
               transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
               className="flex flex-col sm:flex-row gap-5 justify-center items-center"
             >
-              <button className="group bg-[#C7DC49] text-[#10551f] px-10 py-4 rounded-full hover:bg-white transition-all duration-300 font-semibold tracking-wide shadow-lg hover:shadow-xl flex items-center gap-2 min-w-[220px] justify-center">
-                <span>Start Meditating</span>
+              <button
+                onClick={() => setIsContactModalOpen(true)}
+                className="group bg-[#C7DC49] text-[#10551f] px-10 py-4 rounded-full hover:bg-white transition-all duration-300 font-semibold tracking-wide shadow-lg hover:shadow-xl flex items-center gap-2 min-w-[220px] justify-center cursor-pointer"
+              >
+                <span>Contact to US</span>
                 <svg
                   className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
                   fill="none"
@@ -90,8 +97,8 @@ export default function CTASection() {
                 </svg>
               </button>
 
-              <button className="group bg-transparent text-white px-10 py-4 rounded-full hover:bg-white/10 transition-all duration-300 font-medium tracking-wide border border-white/30 hover:border-white/50 flex items-center gap-2 min-w-[220px] justify-center">
-                <span>Explore Benefits</span>
+              <Link href="/services" className="group bg-transparent text-white px-10 py-4 rounded-full hover:bg-white/10 transition-all duration-300 font-medium tracking-wide border border-white/30 hover:border-white/50 flex items-center gap-2 min-w-[220px] justify-center">
+                <span>Explore Services</span>
                 <svg
                   className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
                   fill="none"
@@ -100,11 +107,14 @@ export default function CTASection() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </button>
+              </Link>
             </motion.div>
           </div>
         </motion.div>
       </div>
+      <Modal isOpen={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} title="Contact Us">
+        <ContactForm onClose={() => setIsContactModalOpen(false)} />
+      </Modal>
     </section>
   );
 }
