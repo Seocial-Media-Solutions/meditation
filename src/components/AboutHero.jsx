@@ -110,7 +110,10 @@ const AboutHero = ({
         <motion.img
           src={bannerImage}
           alt={`${title} Banner`}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover "
+           style={{
+         textShadow: "0.1px 0 black, 0 0.1px black, 0.1 px 0 black, 0 -0.1px black",  
+          }}
           variants={imageVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
@@ -147,8 +150,11 @@ const AboutHero = ({
 
           {/* Subtitle with typewriter effect simulation */}
           <motion.p
-            className=" backdrop-blur-4xl md:text-2xl sm:text-sm text-center font-semibold max-w-2xl  px-1 rounded-lg mb-6 text-white drop-shadow-md   bg-[#265ababe] "
+            className=" backdrop-blur-4xl md:text-2xl sm:text-sm text-center font-semibold max-w-2xl  px-1 rounded-lg mb-6 text-white drop-shadow-md   "
             variants={subtitleVariants}
+             style={{
+         textShadow: "0.1px 0 black, 0 0.1px black, 0.1 px 0 black, 0 -0.5px black",  
+          }}
           >
             {subtitle}
           </motion.p>
