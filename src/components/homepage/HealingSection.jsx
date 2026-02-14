@@ -32,7 +32,7 @@ export default function HealingSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl"
+            className="relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden shadow-2xl w-full"
           >
             <Image
               src="/images/healing-meditation.jpg"

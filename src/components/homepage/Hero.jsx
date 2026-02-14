@@ -10,13 +10,13 @@ export default function Hero() {
   const [isJourneyOpen, setIsJourneyOpen] = useState(false);
 
   return (
-    <section className="relative w-full h-screen">
+    <section className="relative w-full min-h-screen flex flex-col">
       <Image
-        src="/images/heroWall.jpeg"
+        src="/images/gallery/slide3.jpeg"
         alt="Meditation"
         fill
         priority
-        className="object-cover"
+        className="object-cover  "
         quality={90}
       />
       {/* <video autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
@@ -27,14 +27,17 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/20"></div>
 
       {/* Hero Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center text-white px-4 ">
+      <div className="relative z-10 flex-grow flex flex-col items-center justify-center text-center  px-4 pt-40 pb-20">
         {/* Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-4xl md:text-5xl  font-serif mb-6 leading-tight mt-20"
+          className=" text-border text-4xl md:text-5xl font-serif mb-6 text-[#C7DC49] bg-transparent backdrop-blur-[1px]  p-3  rounded-lg  leading-tight"
+          style={{
+         textShadow: "0.1px 0 black, 0 0.1px black, 0.1 px 0 black, 0 -0.1px black",  
+          }}
         >
           Meditation for Inner Peace, Balance & Transformation
         </motion.h1>
@@ -46,6 +49,7 @@ export default function Hero() {
           viewport={{ once: false }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="text-lg md:text-xl font-light max-w-3xl mb-12 leading-relaxed"
+
         >
           Discover a gentle yet powerful meditation practice that restores inner balance, awakens joy, expands awareness, and nurtures a deeply peaceful life — within and beyond.
           <br /><br />

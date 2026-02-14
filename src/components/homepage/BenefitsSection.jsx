@@ -129,7 +129,7 @@ export default function BenefitsSection() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="flex justify-center items-center order-1 lg:order-2 mb-8 lg:mb-0"
           >
-            <div className="relative w-[300px] h-[300px] lg:w-[400px] lg:h-[400px]">
+            <div className="relative w-full max-w-[300px] aspect-square lg:max-w-[400px]">
               {/* Rotating Background Image */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative w-full h-full animate-spin-slow">
@@ -145,7 +145,7 @@ export default function BenefitsSection() {
 
               {/* Static Girl Image on Top */}
               <div className="absolute inset-0 flex items-center justify-center z-10">
-                <div className="relative w-[210px] h-[280px] lg:w-[280px] lg:h-[380px]">
+                <div className="relative w-[70%] h-[93%]">
                   <Image
                     src="/images/yoga-girl.png"
                     alt="Meditation Pose"

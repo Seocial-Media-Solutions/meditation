@@ -21,12 +21,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html className="bg-white" lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased   overflow-x-hidden `}
       >
-        <Navbar />
-        {children}
+        <Navbar />  
+        <div className="max-w-screen-3xl mx-auto">
+          {children}
+        </div>
         <div className="bg-[#F7F8ED]">
           <Footer />
         </div>

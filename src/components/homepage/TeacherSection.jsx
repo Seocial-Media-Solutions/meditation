@@ -144,7 +144,7 @@ export default function TeacherSection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="order-1 lg:order-2"
           >
-            <div className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden shadow-2xl w-full">
               <Image
                 src="/images/teacher-meditation.png"
                 alt="Teacher in meditation"

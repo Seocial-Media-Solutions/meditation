@@ -111,7 +111,7 @@ export default function MeditationSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative h-[600px] lg:h-[700px]"
+          className="relative h-[400px] md:h-[500px] lg:h-[700px] w-full"
         >
           <Image
             src="/images/meditation-person.jpg"

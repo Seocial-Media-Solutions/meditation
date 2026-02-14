@@ -45,7 +45,7 @@ export default function MeditationHeader() {
   return (
     <>
       {/* Main Header - visible at top */}
-      <header className={`absolute top-0 left-0 right-0 z-40 bg-white/70 text-black transition-opacity duration-300 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+      <header className={`absolute bg-white/90  top-0 left-0 right-0 z-40   text-black transition-opacity duration-300 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
 
         {/* Top row with logo and menu items */}
         <div className="container mx-auto px-4 py-3 md:py-4">
@@ -64,9 +64,9 @@ export default function MeditationHeader() {
               className="md:hidden flex flex-col gap-1 p-1.5 hover:opacity-80 transition-opacity"
               aria-label="Toggle menu"
             >
-              <span className="w-5 h-0.5 bg-black"></span>
-              <span className="w-5 h-0.5 bg-black"></span>
-              <span className="w-5 h-0.5 bg-black"></span>
+              <span className="w-5 h-0.5 bg-white"></span>
+              <span className="w-5 h-0.5 bg-white"></span>
+              <span className="w-5 h-0.5 bg-white"></span>
             </button>
 
             {/* Center Logo */}
@@ -96,7 +96,7 @@ export default function MeditationHeader() {
               <li>
                 <Link
                   href="/"
-                  className="text-base font-light hover:text-black/80 transition-colors"
+                  className="text-base font-light hover:text-white/80 transition-colors"
                 >
                   Home
                 </Link>
@@ -104,7 +104,7 @@ export default function MeditationHeader() {
               <li>
                 <Link
                   href="/blog"
-                  className="text-base font-light hover:text-black/80 transition-colors"
+                  className="text-base font-light hover:text-white/80 transition-colors"
                 >
                   Blog
                 </Link>
@@ -112,7 +112,7 @@ export default function MeditationHeader() {
               <li>
                 <Link
                   href="/about"
-                  className="text-base font-light hover:text-black/80 transition-colors"
+                  className="text-base font-light hover:text-white/80 transition-colors"
                 >
                   About
                 </Link>
@@ -120,7 +120,7 @@ export default function MeditationHeader() {
               <li>
                 <Link
                   href="/services"
-                  className="text-base font-light hover:text-black/80 transition-colors"
+                  className="text-base font-light hover:text-white/80 transition-colors"
                 >
                   Service
                 </Link>
@@ -128,7 +128,7 @@ export default function MeditationHeader() {
               <li>
                 <Link
                   href="/faq"
-                  className="text-base font-light hover:text-black/80 transition-colors"
+                  className="text-base font-light hover:text-white/80 transition-colors"
                 >
                   FAQs
                 </Link>
