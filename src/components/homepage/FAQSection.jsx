@@ -125,7 +125,7 @@ export default function YogaFAQSection() {
                             </div>
                         </motion.div>
                     </div>
-                    <div className="col-span-2 w-full h-full">
+                    <div className="lg:col-span-2 w-full h-full">
                         {faqs.map((faq, index) => (
                             <motion.div
                                 key={index}
