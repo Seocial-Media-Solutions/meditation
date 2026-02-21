@@ -45,7 +45,7 @@ export default function MeditationHeader() {
   return (
     <>
       {/* Main Header - visible at top */}
-      <header className={`absolute bg-white/90  top-0 left-0 right-0 z-40   text-black transition-opacity duration-300 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+      <header className={`absolute bg-white   top-0 left-0 right-0 z-40   text-black transition-opacity duration-300 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
 
         {/* Top row with logo and menu items */}
         <div className="container mx-auto px-4 py-3 md:py-4">

@@ -17,7 +17,7 @@ import GallerySection from "@/components/homepage/GallerySection";
 export default function Home() {
   return (
     <>
-      <Hero />
+      <Hero  />
       <IntroductionSection />
       <MeditationSection />
       <BenefitsSection />

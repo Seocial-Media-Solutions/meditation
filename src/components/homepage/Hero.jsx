@@ -10,95 +10,102 @@ export default function Hero() {
   const [isJourneyOpen, setIsJourneyOpen] = useState(false);
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col">
-      <Image
-        src="/images/gallery/slide3.jpeg"
-        alt="Meditation"
-        fill
-        priority
-        className="object-cover  "
-        quality={90}
-      />
-      {/* <video autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-        <source src="/images/hero.mp4" type="video/mp4" />
-      </video> */}
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+      `}</style>
 
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/20"></div>
+      <section className="relative w-full min-h-screen md:min-h-[800px] md:h-[800px] flex flex-col font-[Inter] text-neutral-900">
+        <Image
+          src="/images/hero/hero5.jpeg"
+          alt="Meditation"
+          fill
+          priority
+          className="object-cover brightness-95"
+          quality={90}
+        />
 
-      {/* Hero Content */}
-      <div className="relative z-10 flex-grow flex flex-col items-center justify-center text-center  px-4 pt-40 pb-20">
-        {/* Headline */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className=" text-border text-4xl md:text-5xl font-serif mb-6 text-[#C7DC49] bg-transparent backdrop-blur-[1px]  p-3  rounded-lg  leading-tight"
-          style={{
-         textShadow: "0.1px 0 black, 0 0.1px black, 0.1 px 0 black, 0 -0.1px black",  
-          }}
-        >
-          Meditation for Inner Peace, Balance & Transformation
-        </motion.h1>
+        {/* Soft white overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/10 to-white/15"></div>
 
-        {/* Sub-headline */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          className="text-lg md:text-xl font-light max-w-3xl mb-12 leading-relaxed"
+        {/* Hero Content */}
+        <div className="relative mt-35 z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 md:pt-4 pb-20 pt-16 max-w-7xl mx-auto w-full">
 
-        >
-          Discover a gentle yet powerful meditation practice that restores inner balance, awakens joy, expands awareness, and nurtures a deeply peaceful life — within and beyond.
-          <br /><br />
-          Join me on a meaningful journey of self-discovery and inner transformation.
-        </motion.p>
-
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-          className="flex flex-col sm:flex-row gap-4 items-center flex-wrap justify-center"
-        >
-          <Link
-            href="/start-journey"
-            className="px-8 py-4 bg-[#C7DC49] text-gray-700 text-shadow-regal-blue rounded-full font-light text-base hover:bg-opacity-90 transition-colors flex items-center gap-2"
+          {/* Headline */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: false }}
+            className="text-5xl lg:text-6xl font-['Cinzel'] font-semibold mb-6 md:mb-8 leading-tight px-2 tracking-wide"
           >
-            Start Your Meditation Journey
-          </Link>
+            <span className="bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-900 text-transparent bg-clip-text">
+              Meditation for Inner Peace, Balance & Transformation
+            </span>
+          </motion.h1>
 
+          {/* Sub-headline */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            viewport={{ once: false }}
+            className="max-w-4xl mb-10 md:mb-12 px-6 md:px-8 py-4 rounded-3xl text-base sm:text-lg md:text-xl text-neutral-700 leading-relaxed bg-white/80 backdrop-blur-md border border-neutral-200 shadow-lg"
+          >
+            Discover a gentle yet powerful meditation practice that restores inner balance,
+            awakens joy, expands awareness, and nurtures a deeply peaceful life — within and beyond.
+            <br className="hidden sm:block" />
+            <br className="hidden sm:block" />
+            <span className="block mt-4 sm:mt-0 font-medium text-neutral-900">
+              Join me on a meaningful journey of self-discovery and inner transformation.
+            </span>
+          </motion.p>
 
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+            viewport={{ once: false }}
+            className="flex flex-col sm:flex-row gap-4 items-center flex-wrap justify-center w-full max-w-2xl"
+          >
+            <Link
+              href="/start-journey"
+              className="w-full sm:w-auto px-8 py-4 bg-neutral-900 text-white rounded-full font-medium text-sm md:text-base hover:bg-neutral-800 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 shadow-xl"
+            >
+              Start Your Meditation Journey
+            </Link>
 
-          <div className="flex flex-col items-center">
             <Link
               href="/about-practice"
-              className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-light text-base hover:bg-white/10 transition-colors flex items-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 border-2 border-neutral-900 text-neutral-900 rounded-full font-medium text-sm md:text-base hover:bg-neutral-100 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
             >
               Learn About the Practice
             </Link>
-          </div>
-        </motion.div>
+          </motion.div>
 
-        <div
-          onClick={() => setIsJourneyOpen(true)}
-          className="mt-12 flex items-center gap-2 cursor-pointer group text-white hover:text-[#C7DC49] transition-colors duration-300"
-        >
-          <span className="text-lg font-light tracking-wide border-b border-transparent group-hover:border-[#C7DC49] transition-all">
-            Explore More
-          </span>
-          <ArrowRight
-            size={20}
-            className="transition-transform duration-300 group-hover:translate-x-1"
-          />
+          {/* Explore More */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            viewport={{ once: false }}
+            onClick={() => setIsJourneyOpen(true)}
+            className="mt-12 flex items-center gap-2 cursor-pointer group text-neutral-800 hover:text-neutral-600 transition-colors duration-300"
+          >
+            <span className="text-base md:text-lg font-medium tracking-wide border-b border-transparent group-hover:border-neutral-700 transition-all">
+              Explore More
+            </span>
+            <ArrowRight
+              size={20}
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            />
+          </motion.div>
+
         </div>
 
-      </div>
-
-      <JourneyOptions isOpen={isJourneyOpen} onClose={() => setIsJourneyOpen(false)} />
-    </section>
-  )
+        <JourneyOptions isOpen={isJourneyOpen} onClose={() => setIsJourneyOpen(false)} />
+      </section>
+    </>
+  );
 }

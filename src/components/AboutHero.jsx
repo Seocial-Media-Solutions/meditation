@@ -153,7 +153,7 @@ const AboutHero = ({
             className=" backdrop-blur-4xl md:text-2xl sm:text-sm text-center font-semibold max-w-2xl  px-1 rounded-lg mb-6 text-white drop-shadow-md   "
             variants={subtitleVariants}
              style={{
-         textShadow: "0.1px 0 black, 0 0.1px black, 0.1 px 0 black, 0 -0.5px black",  
+         textShadow: "0.1px 0 black, 0 0.1px black, 0.1 px 0 black, 0 -0.1px black",  
           }}
           >
             {subtitle}
