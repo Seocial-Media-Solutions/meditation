@@ -59,7 +59,6 @@ export default function Hero() {
             </span>
             <span className="hidden sm:block mt-4 font-medium text-neutral-900">
               <br />
-              <br />
               Join me on a meaningful journey of self-discovery and inner transformation.
             </span>
           </motion.p>

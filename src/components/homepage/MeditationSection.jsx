@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function MeditationSection() {
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center p-4">
+    <div className="min-h-screen bg-white flex items-center justify-center p-6">
       <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-8 items-center">
         {/* Left Content Section */}
         <div className="space-y-8 px-4 lg:px-12">
@@ -111,7 +111,7 @@ export default function MeditationSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative h-[400px] md:h-[500px] lg:h-[700px] w-full"
+          className="relative h-[300px] md:h-[500px] lg:h-[700px] w-full"
         >
           <Image
             src="/images/meditation-person.jpg"
