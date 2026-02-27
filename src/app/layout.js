@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased   overflow-x-hidden `}
       >
-        <Navbar />  
+        <Navbar />
         <div className="max-w-screen-3xl mx-auto">
           {children}
         </div>

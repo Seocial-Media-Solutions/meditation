@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function MeditationHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -71,8 +72,8 @@ export default function MeditationHeader() {
 
             {/* Center Logo */}
             <div className="flex-1 flex justify-center md:flex-initial">
-              <Link href="/" className="text-2xl md:text-3xl font-serif italic hover:opacity-80 transition-opacity">
-                Logo
+              <Link href="/" className="hover:opacity-80 transition-opacity">
+                <Image src="/images/logo.png" alt="Logo" width={180} height={60} className="h-10 md:h-14 w-auto object-contain" priority />
               </Link>
             </div>
 
@@ -166,9 +167,9 @@ export default function MeditationHeader() {
           </button>
 
           {/* Logo at top */}
-          <div className={`pt-6 pb-8 text-center transition-all duration-700 ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'}`}>
-            <Link href="/" className="text-4xl font-serif italic text-white" onClick={closeMobileMenu}>
-              Logo
+          <div className={`pt-6 pb-8 flex justify-center transition-all duration-700 ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'}`}>
+            <Link href="/" className="inline-block" onClick={closeMobileMenu}>
+              <Image src="/images/logo.png" alt="Logo" width={180} height={60} className="h-14 w-auto object-contain" priority />
             </Link>
           </div>
 
@@ -215,8 +216,8 @@ export default function MeditationHeader() {
       >
         {/* Mobile Scrolled Header */}
         <div className="md:hidden flex items-center justify-between px-4 py-2.5">
-          <Link href="/" className="text-xl font-serif italic">
-            Logo
+          <Link href="/">
+            <Image src="/images/logo.png" alt="Logo" width={140} height={45} className="h-9 w-auto object-contain" />
           </Link>
           <button
             onClick={toggleMobileMenu}

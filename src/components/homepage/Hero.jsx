@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/10 to-white/15"></div>
 
         {/* Hero Content */}
-        <div className="relative mt-35 z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 md:pt-4 pb-20 pt-16 max-w-7xl mx-auto w-full">
+        <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 md:pt-4 pb-20 pt-28 sm:pt-32 max-w-7xl mx-auto w-full h-full my-auto mt-20 md:mt-32">
 
           {/* Headline */}
           <motion.h1
@@ -37,7 +37,7 @@ export default function Hero() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: false }}
-            className="text-5xl lg:text-6xl font-['Cinzel'] font-semibold mb-6 md:mb-8 leading-tight px-2 tracking-wide"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-['Cinzel'] font-semibold mb-4 sm:mb-6 md:mb-8 leading-tight px-2 tracking-wide"
           >
             <span className="bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-900 text-transparent bg-clip-text">
               Meditation for Inner Peace, Balance & Transformation
@@ -50,13 +50,16 @@ export default function Hero() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             viewport={{ once: false }}
-            className="max-w-4xl mb-10 md:mb-12 px-6 md:px-8 py-4 rounded-3xl text-base sm:text-lg md:text-xl text-neutral-700 leading-relaxed bg-white/80 backdrop-blur-md border border-neutral-200 shadow-lg"
+            className="max-w-4xl mb-8 md:mb-12 px-4 sm:px-6 md:px-8 py-4 sm:py-5 rounded-3xl text-sm sm:text-base md:text-xl text-neutral-700 leading-relaxed bg-white/80 backdrop-blur-md border border-neutral-200 shadow-lg"
           >
             Discover a gentle yet powerful meditation practice that restores inner balance,
             awakens joy, expands awareness, and nurtures a deeply peaceful life — within and beyond.
-            <br className="hidden sm:block" />
-            <br className="hidden sm:block" />
-            <span className="block mt-4 sm:mt-0 font-medium text-neutral-900">
+            <span className="block mt-3 text-neutral-900 font-medium sm:hidden">
+              Join me on a meaningful journey of self-discovery and inner transformation.
+            </span>
+            <span className="hidden sm:block mt-4 font-medium text-neutral-900">
+              <br />
+              <br />
               Join me on a meaningful journey of self-discovery and inner transformation.
             </span>
           </motion.p>
@@ -79,6 +82,7 @@ export default function Hero() {
             <Link
               href="/about-practice"
               className="w-full sm:w-auto px-8 py-4 border-2 border-neutral-900 text-neutral-900 rounded-full font-medium text-sm md:text-base hover:bg-neutral-100 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
+                         
             >
               Learn About the Practice
             </Link>

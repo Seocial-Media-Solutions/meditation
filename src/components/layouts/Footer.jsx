@@ -26,6 +26,11 @@ export default function Footer() {
             </div>
 
             <div className="max-w-7xl mx-auto px-4 relative z-10">
+                <div className="mb-10 text-center md:text-left flex justify-center md:justify-start">
+                    <Link href="/" className="inline-block hover:opacity-80 transition-opacity">
+                        <Image src="/images/logo.png" alt="Logo" width={180} height={60} className="h-12 md:h-16 w-auto object-contain" />
+                    </Link>
+                </div>
                 <div className="grid md:grid-cols-4 gap-8 text-gray-200">
 
                     {/* Column 1: Explore (Navbar Links) */}
