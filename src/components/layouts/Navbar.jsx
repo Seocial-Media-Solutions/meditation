@@ -49,7 +49,7 @@ export default function MeditationHeader() {
       <header className={`absolute bg-white   top-0 left-0 right-0 z-40   text-black transition-opacity duration-300 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
 
         {/* Top row with logo and menu items */}
-        <div className="container mx-auto px-4 py-3 md:py-4">
+        <div className="container mx-auto px-2 py-0.5 md:py-4">
           <div className="flex items-center justify-between">
             {/* Left menu item - Hidden on mobile */}
             <Link
@@ -62,18 +62,18 @@ export default function MeditationHeader() {
             {/* Mobile Menu Button - Left side */}
             <button
               onClick={toggleMobileMenu}
-              className="md:hidden flex flex-col gap-1 p-1.5 hover:opacity-80 transition-opacity"
+              className="md:hidden flex flex-col gap-1 p-1.5 hover:opacity-80 transition-opacity "
               aria-label="Toggle menu"
             >
-              <span className="w-5 h-0.5 bg-white"></span>
-              <span className="w-5 h-0.5 bg-white"></span>
-              <span className="w-5 h-0.5 bg-white"></span>
+              <span className="w-5 h-0.5 bg-black"></span>
+              <span className="w-5 h-0.5 bg-black"></span>
+              <span className="w-5 h-0.5 bg-black"></span>
             </button>
 
             {/* Center Logo */}
             <div className="flex-1 flex justify-center md:flex-initial">
               <Link href="/" className="hover:opacity-80 transition-opacity">
-                <Image src="/images/newlogo.png" alt="Logo" width={180} height={60} className="h-10 md:h-14 w-auto object-contain" priority />
+                <Image src="/images/newlogo.png" alt="Logo" width={180} height={60} className="h-18 md:h-14 w-auto object-contain" priority />
               </Link>
             </div>
 
@@ -167,9 +167,9 @@ export default function MeditationHeader() {
           </button>
 
           {/* Logo at top */}
-          <div className={`pt-6 pb-8 flex justify-center transition-all duration-700 ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'}`}>
+          <div className={` flex justify-center transition-all duration-700 py-2 px-3 ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'}`}>
             <Link href="/" className="inline-block" onClick={closeMobileMenu}>
-              <Image src="/images/newlogo.png" alt="Logo" width={180} height={60} className="h-14 w-auto object-contain" priority />
+              <Image src="/images/newlogo.png" alt="Logo" width={180} height={60} className="h-28 w-auto object-contain" priority />
             </Link>
           </div>
 
@@ -215,9 +215,9 @@ export default function MeditationHeader() {
           }`}
       >
         {/* Mobile Scrolled Header */}
-        <div className="md:hidden flex items-center justify-between px-4 py-2.5">
+        <div className="md:hidden  flex items-center justify-between  px-3 py-2 ">
           <Link href="/">
-            <Image src="/images/newlogo.png" alt="Logo" width={140} height={45} className="h-9 w-auto object-contain" />
+            <Image src="/images/newlogo.png" alt="Logo" width={140} height={45} className="h-18 w-auto object-contain  aspect[1/1]" />
           </Link>
           <button
             onClick={toggleMobileMenu}
