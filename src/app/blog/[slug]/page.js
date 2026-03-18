@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 import Image from "next/image";
+import { User } from "lucide-react";
 
 // import { useEffect } from 'react';
 
@@ -38,7 +39,7 @@ export async function generateMetadata({ params }) {
       description:
         blog.metaDescription || blog.excerpt || blog.content.substring(0, 160),
       type: "article",
-      url: `https://boneandjoints.in/blog/${blog.slug}`,
+      url: `https://meditation-site.com/blog/${blog.slug}`,
       images: [
         {
           url: blog.image || "/images/placeholder.jpg",
@@ -48,9 +49,9 @@ export async function generateMetadata({ params }) {
         },
       ],
     },
-    canonical: `https://boneandjoints.in/blog/${blog.slug}`,
+    canonical: `https://meditation-site.com/blog/${blog.slug}`,
     alternates: {
-      canonical: `https://boneandjoints.in/blog/${blog.slug}`,
+      canonical: `https://meditation-site.com/blog/${blog.slug}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -64,11 +65,11 @@ export async function generateMetadata({ params }) {
       follow: true,
     },
     other: {
-      "application-name": "Bone & Joints Clinic",
-      author: "Dr. Abhishek Saxena",
-      publisher: "Bone & Joints Clinic",
+      "application-name": "Meditation & Yoga Sanctuary",
+      author: blog.author || "Meditation Guide",
+      publisher: "Meditation & Yoga Sanctuary",
       generator: "Next.js",
-      "theme-color": "#ffffff",
+      "theme-color": "#C7DC49",
     },
   };
 }
@@ -82,7 +83,7 @@ function BlogContent({ content }) {
       font-weight: 700;
       margin-top: 2rem;
       margin-bottom: 1rem;
-      color: #1e3a8a;
+      color: #374151; /* Dark gray for a more grounded feel */
       line-height: 1.2;
     }
     
@@ -91,18 +92,18 @@ function BlogContent({ content }) {
       font-weight: 600;
       margin-top: 1.5rem;
       margin-bottom: 0.75rem;
-      color: #1e40af;
+      color: #C7DC49; /* Meditation green for subheadings */
       line-height: 1.3;
     }
     
     .blog-content p {
-      margin-bottom: 1rem;
-      line-height: 1.7;
-      color:black;
+      margin-bottom: 1.25rem;
+      line-height: 1.8;
+      color: #4B5563; /* Softer gray for readability */
     }
 
     .blog-content {
-    color: black;
+      color: #1F2937;
     }
   `;
 
@@ -128,20 +129,20 @@ export default async function SingleBlogPage({ params }) {
   // If no blog is found, return a not found message
   if (!blog) {
     return (
-      <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden p-6">
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-900 to-cyan-400 bg-clip-text text-transparent mb-4">
-              Blog Not Found
+      <div className="min-h-screen bg-[#F7F8ED] py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden p-12">
+            <h1 className="text-4xl font-serif text-gray-900 mb-6">
+              Article Not Found
             </h1>
-            <p className="text-gray-700 mb-4">
-              Could not find blog with slug: {slug}
+            <p className="text-gray-600 mb-8 max-w-md mx-auto">
+              We couldn't find the article you're looking for. It may have been moved or removed.
             </p>
             <Link
               href="/blog"
-              className="inline-block bg-gradient-to-r from-blue-900 to-cyan-400 text-white px-4 py-2 rounded-lg hover:opacity-90 transition duration-300"
+              className="inline-flex items-center bg-[#C7DC49] text-white px-8 py-4 rounded-full hover:bg-[#b5ca42] transition-colors duration-300 font-medium"
             >
-              Back to Blogs
+              Back to Insights
             </Link>
           </div>
         </div>
@@ -159,7 +160,7 @@ export default async function SingleBlogPage({ params }) {
   return (
     <article className="min-h-screen bg-gray-50">
       {/* Hero section with image */}
-      <div className="relative w-full h-80 md:h-96 max-w-6xl mx-auto mt-0">
+      <div className="relative w-full aspect-[3/2] max-w-6xl mx-auto mt-0">
         <Image
           src={blog.image || "/images/placeholder.jpg"}
           alt={blog.alt || blog.title}
@@ -176,19 +177,13 @@ export default async function SingleBlogPage({ params }) {
       </div>
 
       {/* Content section */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden p-6 md:p-10">
           {/* Author and date info */}
           <div className="flex items-center mb-8 pb-4 border-b border-gray-200">
             <div className="flex items-center">
-              <div className="mr-4 w-20 h-20 relative items-center justify-center">
-                <Image
-                  src="/images/gallery/slide0.jpeg"
-                  alt="Dr. Abhishek Saxena"
-                  width={80}
-                  height={80}
-                  className="rounded-full object-cover"
-                />
+              <div className="mr-5 w-16 h-16 relative flex items-center justify-center bg-[#C7DC49]/10 rounded-full">
+                <User className="w-8 h-8 text-[#C7DC49]" />
               </div>
               <div>
                 <p className="font-medium text-gray-900">{blog.author}</p>
@@ -217,12 +212,13 @@ export default async function SingleBlogPage({ params }) {
           <BlogContent content={blog.content} />
 
           {/* Back button */}
-          <div className="mt-10 pt-6 border-t border-gray-200">
+          <div className="mt-12 pt-8 border-t border-gray-100">
             <Link
               href="/blog"
-              className="inline-block bg-gradient-to-r from-blue-900 to-cyan-400 text-white px-6 py-3 rounded-lg hover:opacity-90 transition duration-300"
+              className="inline-flex items-center text-[#C7DC49] hover:gap-3 gap-2 transition-all duration-300 font-medium group"
             >
-              ← Back to All Blogs
+              <span className="text-xl transition-transform group-hover:-translate-x-1">←</span>
+              <span>Back to All Articles</span>
             </Link>
           </div>
         </div>
