@@ -9,6 +9,7 @@ const AboutHero = ({
   title = "meditation Hero Title",
   subtitle = "Dedicated to excellence in medical care and research",
   breadcrumbs = breadcrumbs,
+  color = "text-white",
 }) => {
   const { ref, inView } = useInView({
     threshold: 0.3,
@@ -150,7 +151,7 @@ const AboutHero = ({
 
           {/* Subtitle with typewriter effect simulation */}
           <motion.p
-            className=" backdrop-blur-4xl md:text-2xl sm:text-sm text-center font-semibold max-w-2xl  px-1 rounded-lg mb-6 text-white drop-shadow-md   "
+            className={` backdrop-blur-4xl md:text-2xl sm:text-sm text-center font-semibold max-w-2xl  px-1 rounded-lg mb-6  ${color} drop-shadow-md`}
             variants={subtitleVariants}
              style={{
          textShadow: "0.1px 0 black, 0 0.1px black, 0.1 px 0 black, 0 -0.1px black",  

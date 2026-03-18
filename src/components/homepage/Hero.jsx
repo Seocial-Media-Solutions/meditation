@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/10 to-white/15"></div>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 md:pt-4 pb-20 pt-28 sm:pt-32 max-w-7xl mx-auto w-full h-full my-auto mt-20 md:mt-32">
+        <div className="relative z-10 flex flex-col items-center justify-center text-center px-2 sm:px-6 lg:px-8 md:pt-4 pb-20 pt-5 sm:pt-32 max-w-7xl mx-auto w-full h-full my-auto mt-20 md:mt-32">
 
           {/* Headline */}
           <motion.h1
@@ -81,7 +81,7 @@ export default function Hero() {
 
             <Link
               href="/about-practice"
-              className="w-full sm:w-auto px-8 py-4 border-2 border-neutral-900 text-neutral-900 rounded-full font-medium text-sm md:text-base hover:bg-neutral-100 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
+              className="w-full sm:w-auto px-8 py-4 border-2 border-neutral-900 text-neutral-950 rounded-full font-bold text-sm md:text-base hover:bg-neutral-400 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
                          
             >
               Learn About the Practice
@@ -95,9 +95,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.6 }}
             viewport={{ once: false }}
             onClick={() => setIsJourneyOpen(true)}
-            className="mt-12 flex items-center gap-2 cursor-pointer group text-neutral-800 hover:text-neutral-600 transition-colors duration-300"
+            className="   mt-12 flex items-center gap-2 cursor-pointer group text-neutral-800 hover:text-neutral-600 transition-colors duration-300"
           >
-            <span className="text-base md:text-lg font-medium tracking-wide border-b border-transparent group-hover:border-neutral-700 transition-all">
+            <span className=" bg-neutral-900 lg:bg-transparent text-white lg:text-neutral-900 px-4 py-2 rounded-full text-base md:text-lg font-medium tracking-wide border-b border-transparent group-hover:border-neutral-700 transition-all">
               Explore More
             </span>
             <ArrowRight

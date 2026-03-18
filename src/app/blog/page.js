@@ -109,6 +109,7 @@ export default function BlogPage() {
         title="Meditation & Yoga Insights"
         subtitle="Discover wisdom, practices, and guidance for your journey to inner peace and spiritual awakening"
         breadcrumbs={[{ label: "Blog", path: "/blog" }]}
+        color=" text-neutral-700  py-4 bg-white/80 backdrop-blur-md border border-neutral-200 shadow-lg"
       />
 
       {/* Add structured data */}
