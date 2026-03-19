@@ -166,18 +166,14 @@ export default async function SingleBlogPage({ params }) {
           alt={blog.alt || blog.title}
           fill
           priority
-          className="object-cover rounded-lg "
+          className="object-cover rounded-2xl "
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70 rounded-lg"></div>
-        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12">
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-2">
-            {blog.heading}
-          </h1>
-        </div>
+        
+        
       </div>
 
       {/* Content section */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      <div className="max-w-6xl mx-auto   py-12">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden p-6 md:p-10">
           {/* Author and date info */}
           <div className="flex items-center mb-8 pb-4 border-b border-gray-200">
@@ -209,6 +205,11 @@ export default async function SingleBlogPage({ params }) {
           )}
 
           {/* Using our custom BlogContent component */}
+          
+          <h1 className="text-3xl md:text-5xl font-bold text-neutral-900 mb-2">
+            {blog.heading}
+          </h1>
+       
           <BlogContent content={blog.content} />
 
           {/* Back button */}
