@@ -15,7 +15,7 @@ export default function Hero() {
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap');
       `}</style>
 
-      <section className="relative w-full min-h-screen md:min-h-[800px] md:h-[800px] flex flex-col font-[Inter] text-neutral-900">
+      <section className="relative w-full min-h-screen md:min-h-[1000px] md:h-[1000px] flex flex-col font-[Inter] text-neutral-900">
         <Image
           src="/images/hero/hero5.jpeg"
           alt="Meditation"
