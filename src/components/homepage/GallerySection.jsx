@@ -37,7 +37,7 @@ export default function GallerySection() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-lg font-light text-black/70"
                     >
-                        A glimpse into the shared peace and collective growth of our community.
+                       There is nothing spectacular about meditation—it all happens within. Yet at times, the joy overflows, and we feel the urge to capture or recreate that blissful state of inner peace. So here it is—peaceful, inside and out—as these images hopefully convey.
                     </motion.p>
                 </div>
             </div>

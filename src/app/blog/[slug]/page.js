@@ -133,10 +133,10 @@ export default async function SingleBlogPage({ params }) {
         <div className="max-w-6xl mx-auto text-center">
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden p-12">
             <h1 className="text-4xl font-serif text-gray-900 mb-6">
-              Article Not Found
+              Blog Not Found
             </h1>
             <p className="text-gray-600 mb-8 max-w-md mx-auto">
-              We couldn't find the article you're looking for. It may have been moved or removed.
+              We couldn't find the blog you're looking for. It may have been moved or removed.
             </p>
             <Link
               href="/blog"
@@ -218,7 +218,7 @@ export default async function SingleBlogPage({ params }) {
               className="inline-flex items-center text-[#C7DC49] hover:gap-3 gap-2 transition-all duration-300 font-medium group"
             >
               <span className="text-xl transition-transform group-hover:-translate-x-1">←</span>
-              <span>Back to All Articles</span>
+              <span>Back to All Blogs</span>
             </Link>
           </div>
         </div>

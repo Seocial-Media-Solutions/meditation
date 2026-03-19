@@ -229,7 +229,7 @@ export default function AnimatedBlogGrid({ blogs }) {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
           >
-            {sortedBlogs.length} {sortedBlogs.length === 1 ? 'article' : 'articles'} • Page {currentPage} of {totalPages}
+            {sortedBlogs.length} {sortedBlogs.length === 1 ? 'blog' : 'blogs'} • Page {currentPage} of {totalPages}
           </motion.div>
         </motion.div>
 
@@ -355,7 +355,7 @@ export default function AnimatedBlogGrid({ blogs }) {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1 + 1.0 }}
                     >
-                      <span>Read Article</span>
+                      <span>Read More</span>
                       <motion.span
                         className="text-xl"
                         animate={{ x: [0, 5, 0] }}

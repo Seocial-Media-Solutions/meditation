@@ -15,11 +15,11 @@ export const metadata = {
   title:
     "Meditation & Yoga Blog | Insights on Inner Peace, Mindfulness & Spiritual Growth",
   description:
-    "Explore expert articles on meditation techniques, yoga practices, mindfulness, spiritual awakening, and holistic wellness. Discover the path to inner peace and transformation.",
+    "Explore expert blogs on meditation techniques, yoga practices, mindfulness, spiritual awakening, and holistic wellness. Discover the path to inner peace and transformation.",
   keywords: [
     "meditation blog",
     "yoga insights",
-    "mindfulness articles",
+    "mindfulness blogs",
     "spiritual growth",
     "inner peace guide",
     "meditation techniques",
@@ -108,7 +108,7 @@ export default function BlogPage() {
         bannerImage="/images/gallery/slide2.jpeg"
         title="Meditation & Yoga Insights"
         subtitle="Discover wisdom, practices, and guidance for your journey to inner peace and spiritual awakening"
-        breadcrumbs={[{ label: "Blog", path: "/blog" }]}
+        breadcrumbs={[{ label: "Home", path: "/" }, { label: "Blogs", path: "/blog" }]}
         color=" text-neutral-700  py-4 bg-white/80 backdrop-blur-md border border-neutral-200 shadow-lg"
       />
 
