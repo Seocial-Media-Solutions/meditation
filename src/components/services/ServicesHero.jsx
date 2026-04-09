@@ -53,9 +53,7 @@ export default function ServicesHero() {
                     transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                     className="text-lg md:text-xl font-light max-w-3xl mx-auto leading-relaxed"
                 >
-                    Discover transformative practices designed to nurture your body, calm your mind,
-                    and awaken your spirit. From beginner-friendly sessions to advanced workshops,
-                    we offer guidance for every step of your journey.
+                    Time is our most valuable and finite resource. Yet, for over 40 years, dedicated meditation practitioners and volunteer coaches like myself have joyfully devoted countless hours to teaching and practicing meditation, even amidst demanding schedules.
                 </motion.p>
 
 

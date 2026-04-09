@@ -173,7 +173,7 @@ export default async function SingleBlogPage({ params }) {
       </div>
 
       {/* Content section */}
-      <div className="max-w-6xl mx-auto   py-12">
+      <div className="max-w-6xl mx-auto  py-12">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden p-6 md:p-10">
           {/* Author and date info */}
           <div className="flex items-center mb-8 pb-4 border-b border-gray-200">

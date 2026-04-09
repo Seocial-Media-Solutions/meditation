@@ -19,60 +19,12 @@ import {
 const services = [
     {
         id: 1,
-        title: "Guided Meditation Sessions",
-        description: "Join our experienced instructors for deeply relaxing guided meditation sessions. Perfect for beginners and experienced practitioners alike.",
-        icon: Brain,
-        image: "/images/service-meditation.jpg",
-        duration: "45-60 minutes",
-        level: "All Levels",
-        features: [
-            "Breath awareness techniques",
-            "Body scan meditation",
-            "Visualization practices",
-            "Stress relief methods"
-        ],
-        color: "from-purple-500 to-indigo-600"
-    },
-    {
-        id: 2,
-        title: "Hatha Yoga Classes",
-        description: "Traditional Hatha yoga focusing on asanas (postures), pranayama (breathing), and meditation for holistic wellness.",
-        icon: Sunrise,
-        image: "/images/service-hatha.jpg",
-        duration: "60-90 minutes",
-        level: "Beginner to Intermediate",
-        features: [
-            "Classical yoga postures",
-            "Breathing exercises",
-            "Flexibility training",
-            "Strength building"
-        ],
-        color: "from-orange-500 to-pink-600"
-    },
-    {
-        id: 3,
-        title: "Mindfulness Workshops",
-        description: "Learn practical mindfulness techniques to integrate awareness into your daily life and reduce stress.",
-        icon: Heart,
-        image: "/images/service-mindfulness.jpg",
-        duration: "2-3 hours",
-        level: "All Levels",
-        features: [
-            "Present moment awareness",
-            "Mindful eating practices",
-            "Stress management tools",
-            "Daily integration techniques"
-        ],
-        color: "from-green-500 to-teal-600"
-    },
-    {
-        id: 4,
-        title: "Private Coaching",
-        description: "One-on-one personalized sessions tailored to your unique needs, goals, and spiritual journey.",
+        title: "Private Online Sessions",
+        description: "One-on-one customized online sessions tailored to your unique needs, goals, and spiritual journey.",
         icon: User,
         image: "/images/service-private.jpg",
-        duration: "60 minutes",
-        level: "Customized",
+        duration: "45 minutes",
+        level: "1-2 Slots/Week",
         features: [
             "Personalized practice plan",
             "Individual attention",
@@ -82,68 +34,68 @@ const services = [
         color: "from-blue-500 to-cyan-600"
     },
     {
-        id: 5,
-        title: "Group Meditation Circles",
-        description: "Experience the powerful collective energy of group meditation in a supportive, peaceful environment.",
+        id: 2,
+        title: "Small Group Meditation",
+        description: "Experience the powerful collective energy of guided group meditation in an intimate, supportive environment.",
         icon: Users,
         image: "/images/service-group.jpg",
-        duration: "60 minutes",
-        level: "All Levels",
+        duration: "45-60 minutes",
+        level: "4-5 Participants",
         features: [
             "Community connection",
             "Shared energy field",
             "Group discussions",
-            "Weekly sessions"
+            "Guided practice"
         ],
         color: "from-violet-500 to-purple-600"
     },
     {
-        id: 6,
-        title: "Meditation Retreats",
-        description: "Immersive multi-day retreats in serene natural settings for deep transformation and renewal.",
-        icon: Mountain,
-        image: "/images/service-retreat.jpg",
-        duration: "2-7 days",
-        level: "Intermediate to Advanced",
+        id: 3,
+        title: "Corporate Programs",
+        description: "Comprehensive workplace wellness sessions designed for your team, co-facilitated with another experienced coach.",
+        icon: Heart,
+        image: "/images/service-mindfulness.jpg",
+        duration: "Custom",
+        level: "Advance Booking",
         features: [
-            "Silent meditation periods",
-            "Nature immersion",
-            "Healthy vegetarian meals",
-            "Spiritual teachings"
+            "Stress management",
+            "Workplace well-being",
+            "Team connection",
+            "Joint facilitation"
         ],
-        color: "from-emerald-500 to-green-600"
+        color: "from-teal-500 to-emerald-600"
     },
     {
-        id: 7,
-        title: "Yoga Philosophy Classes",
-        description: "Explore the ancient wisdom of yoga philosophy, including the Yoga Sutras, Bhagavad Gita, and more.",
-        icon: BookOpen,
-        image: "/images/service-philosophy.jpg",
-        duration: "90 minutes",
-        level: "All Levels",
-        features: [
-            "Ancient texts study",
-            "Philosophical discussions",
-            "Practical applications",
-            "Spiritual insights"
-        ],
-        color: "from-amber-500 to-orange-600"
-    },
-    {
-        id: 8,
-        title: "Chakra Healing Sessions",
-        description: "Balance and align your energy centers through guided meditation, visualization, and energy work.",
+        id: 4,
+        title: "Music & Meditation",
+        description: "Immersive in-person experiences featuring live spiritual music, bringing harmony to body and soul.",
         icon: Sparkles,
-        image: "/images/service-chakra.jpg",
-        duration: "75 minutes",
-        level: "All Levels",
+        image: "/images/service-retreat.jpg",
+        duration: "Varies",
+        level: "Thailand / SEA",
         features: [
-            "Energy assessment",
-            "Chakra balancing",
-            "Crystal healing",
-            "Sound therapy"
+            "Live spiritual music",
+            "Inward journey",
+            "Deep relaxation",
+            "In-person experience"
         ],
         color: "from-pink-500 to-rose-600"
+    },
+    {
+        id: 5,
+        title: "Sacred Arts Exploration",
+        description: "Inner journey experiences integrating meditation with expressive arts, such as dance and self-exploration.",
+        icon: Sunrise,
+        image: "/images/service-chakra.jpg",
+        duration: "Varies",
+        level: "All Levels",
+        features: [
+            "Meditative dance",
+            "Self-exploration",
+            "Expressive arts",
+            "Deep healing"
+        ],
+        color: "from-orange-500 to-amber-600"
     }
 ];
 
@@ -188,14 +140,13 @@ export default function ServicesGrid() {
                     className="text-center mb-16"
                 >
                     <p className="text-sm font-semibold tracking-[0.3em] text-[#4A6741] uppercase mb-4">
-                        What We Offer
+                        Why Make This Commitment?
                     </p>
                     <h2 className="text-4xl md:text-5xl font-serif text-[#1A2E05] mb-6">
-                        Our Services
+                        The Ultimate Return on Investment
                     </h2>
                     <p className="text-lg text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
-                        Choose from our diverse range of meditation and yoga services,
-                        each designed to support your unique path to wellness and inner peace.
+                        Meditation deeply anchors us in the present moment, offering profound peace, joy, and clarity. Whether you are an experienced meditation enthusiast seeking like-minded peers, someone simply curious about the benefits, or even a healthy skeptic, I welcome the opportunity to connect.
                     </p>
                 </motion.div>
 
