@@ -97,7 +97,7 @@ export default function MeditationHeader() {
               <li>
                 <Link
                   href="/"
-                  className="text-base font-light hover:text-white/80 transition-colors"
+                  className="text-base font-light hover:text-black/80 transition-colors"
                 >
                   Home
                 </Link>
@@ -105,7 +105,7 @@ export default function MeditationHeader() {
               <li>
                 <Link
                   href="/blog"
-                  className="text-base font-light hover:text-white/80 transition-colors"
+                  className="text-base font-light hover:text-black/80 transition-colors"
                 >
                   Blog
                 </Link>
@@ -113,7 +113,7 @@ export default function MeditationHeader() {
               <li>
                 <Link
                   href="/about"
-                  className="text-base font-light hover:text-white/80 transition-colors"
+                  className="text-base font-light hover:text-black/80 transition-colors"
                 >
                   About
                 </Link>
@@ -121,7 +121,7 @@ export default function MeditationHeader() {
               <li>
                 <Link
                   href="/services"
-                  className="text-base font-light hover:text-white/80 transition-colors"
+                  className="text-base font-light hover:text-black/80 transition-colors"
                 >
                   Service
                 </Link>
@@ -129,7 +129,7 @@ export default function MeditationHeader() {
               <li>
                 <Link
                   href="/faq"
-                  className="text-base font-light hover:text-white/80 transition-colors"
+                  className="text-base font-light hover:text-black/80 transition-colors"
                 >
                   FAQs
                 </Link>
