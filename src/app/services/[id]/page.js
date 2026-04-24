@@ -125,7 +125,7 @@ export default function ServiceDetailPage({ params }) {
                 <div className="text-center">
                     <h1 className="text-4xl font-serif text-[#1A2E05] mb-4">Service Not Found</h1>
                     <Link href="/services" className="text-[#4A6741] hover:text-[#C7DC49] transition-colors">
-                        Return to Services
+                        Return to What we can offer
                     </Link>
                 </div>
             </div>
@@ -154,12 +154,9 @@ export default function ServiceDetailPage({ params }) {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                         >
-                            <Link 
-                                href="/services"
-                                className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors group"
-                            >
-                                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                                <span>Back to Services</span>
+                            <Link href="/services" className="inline-flex items-center gap-2 text-gray-400 hover:text-[#C7DC49] transition-colors font-light mb-6">
+                                <ArrowLeft className="w-4 h-4" />
+                                <span>Back to What we can offer</span>
                             </Link>
                             <h1 className="text-4xl md:text-6xl font-serif text-white mb-4">
                                 {service.title}

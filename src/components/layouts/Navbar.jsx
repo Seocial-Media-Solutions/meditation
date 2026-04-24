@@ -73,7 +73,7 @@ export default function MeditationHeader() {
             {/* Center Logo */}
             <div className="flex-1 flex justify-center md:flex-initial">
               <Link href="/" className="hover:opacity-80 transition-opacity">
-                <Image src="/images/newlogo.png" alt="Logo" width={180} height={60} className="h-18 md:h-14 w-auto object-contain" priority />
+                <Image src="/images/newlogo.png" alt="Logo" width={280} height={100} className="h-24 md:h-20 w-auto object-contain" priority />
               </Link>
             </div>
 
@@ -123,7 +123,7 @@ export default function MeditationHeader() {
                   href="/services"
                   className="text-base font-light hover:text-black/80 transition-colors"
                 >
-                  Service
+                  What we can offer
                 </Link>
               </li>
               <li>
@@ -169,7 +169,7 @@ export default function MeditationHeader() {
           {/* Logo at top */}
           <div className={` flex justify-center transition-all duration-700 py-2 px-3 ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'}`}>
             <Link href="/" className="inline-block" onClick={closeMobileMenu}>
-              <Image src="/images/newlogo.png" alt="Logo" width={180} height={60} className="h-28 w-auto object-contain" priority />
+              <Image src="/images/newlogo.png" alt="Logo" width={280} height={100} className="h-32 w-auto object-contain" priority />
             </Link>
           </div>
 
@@ -180,7 +180,7 @@ export default function MeditationHeader() {
                 { href: '/', label: 'Home', delay: '100ms' },
                 { href: '/blog', label: 'Blog', delay: '200ms' },
                 { href: '/about', label: 'About', delay: '300ms' },
-                { href: '/services', label: 'Service', delay: '400ms' },
+                { href: '/services', label: 'What we can offer', delay: '400ms' },
                 { href: '/faq', label: 'FAQs', delay: '500ms' },
                 { href: '/contact', label: 'Contact Us', delay: '600ms' },
               ].map((item, index) => (
@@ -217,7 +217,7 @@ export default function MeditationHeader() {
         {/* Mobile Scrolled Header */}
         <div className="md:hidden  flex items-center justify-between  px-3 py-2 ">
           <Link href="/">
-            <Image src="/images/newlogo.png" alt="Logo" width={140} height={45} className="h-18 w-auto object-contain  aspect[1/1]" />
+            <Image src="/images/newlogo.png" alt="Logo" width={220} height={80} className="h-24 w-auto object-contain" />
           </Link>
           <button
             onClick={toggleMobileMenu}
@@ -262,7 +262,7 @@ export default function MeditationHeader() {
                 href="/services"
                 className={`text-base font-light transition-colors ${isScrolled ? 'hover:text-gray-600' : 'hover:text-white/80'}`}
               >
-                Service
+                What we can offer
               </Link>
             </li>
             <li>

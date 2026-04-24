@@ -53,8 +53,8 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/services" className="text-base text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
-                                    Service
+                                <Link href="/services" className="text-white/80 hover:text-white transition-colors duration-300">
+                                    What we can offer
                                 </Link>
                             </li>
                             <li>
@@ -67,7 +67,7 @@ export default function Footer() {
 
                     {/* Column 2: Services */}
                     <div>
-                        <h4 className="text-sm font-semibold mb-4 text-white uppercase tracking-wider">Services</h4>
+                        <h4 className="text-sm font-semibold mb-4 text-white uppercase tracking-wider">What we can offer</h4>
                         <ul className="space-y-2">
                             <li>
                                 <Link href="/meditate-now" className="text-base text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
