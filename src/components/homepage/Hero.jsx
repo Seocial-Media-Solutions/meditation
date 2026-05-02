@@ -34,10 +34,10 @@ function SplitText({ text, className, delay = 0 }) {
 /* ── Breathing concentric rings ── */
 function BreathingMandala() {
   const rings = [
-    { scale: [1, 1.18, 1], opacity: [0.7, 0.2, 0.7], dur: 4.5, delay: 0,    size: 360 },
-    { scale: [1, 1.22, 1], opacity: [0.5, 0.12, 0.5], dur: 4.5, delay: 0.4, size: 290 },
-    { scale: [1, 1.28, 1], opacity: [0.35, 0.08, 0.35], dur: 4.5, delay: 0.8, size: 220 },
-    { scale: [1, 1.35, 1], opacity: [0.2, 0.05, 0.2], dur: 4.5, delay: 1.2, size: 150 },
+    { scale: [1, 1.18, 1], opacity: [0.7, 0.2, 0.7], dur: 4.5, delay: 0,    size: 'min(90vw, 360px)' },
+    { scale: [1, 1.22, 1], opacity: [0.5, 0.12, 0.5], dur: 4.5, delay: 0.4, size: 'min(75vw, 290px)' },
+    { scale: [1, 1.28, 1], opacity: [0.35, 0.08, 0.35], dur: 4.5, delay: 0.8, size: 'min(60vw, 220px)' },
+    { scale: [1, 1.35, 1], opacity: [0.2, 0.05, 0.2], dur: 4.5, delay: 1.2, size: 'min(45vw, 150px)' },
   ];
 
   return (
@@ -138,8 +138,8 @@ export default function Hero() {
         <div 
           className="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-[#080a06]"
           style={{ 
-            maskImage: 'linear-gradient(to bottom, black 0%, black 70%, transparent 100%)',
-            WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 70%, transparent 100%)'
+            maskImage: 'linear-gradient(to bottom, black 0%, black 92%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 92%, transparent 100%)'
           }}
         >
           {/* BG image */}
@@ -147,21 +147,21 @@ export default function Hero() {
             src="/images/hero/hero5.jpeg"
             alt="Meditation"
             fill priority
-            className="object-cover object-center opacity-20"
+            className="object-cover object-center opacity-35"
             quality={90}
           />
           {/* radial vignette */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_50%,transparent_30%,#080a06_100%)]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#080a06]/60 via-transparent to-[#080a06]/90" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_100%_at_50%_50%,transparent_60%,#080a06_70%)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#080a06]/30 via-transparent to-[#080a06]/10" />
 
           {/* Animated Bottom Shade */}
           <motion.div 
             className="absolute inset-0"
             animate={{ 
               background: [
-                'linear-gradient(to top, rgba(8,10,6,0.95) 0%, transparent 40%)',
-                'linear-gradient(to top, rgba(16,85,31,0.2) 0%, transparent 60%)',
-                'linear-gradient(to top, rgba(8,10,6,0.95) 0%, transparent 40%)'
+                'linear-gradient(to top, rgba(8,10,6,0.4) 0%, transparent 8%)',
+                'linear-gradient(to top, rgba(16,85,31,0.05) 0%, transparent 12%)',
+                'linear-gradient(to top, rgba(8,10,6,0.4) 0%, transparent 8%)'
               ]
             }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
@@ -172,7 +172,7 @@ export default function Hero() {
         {mounted && <Particles count={28} />}
 
         {/* ──────────── MAIN CONTENT GRID ──────────── */}
-        <div className="relative z-10 flex-1 grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-0 max-w-7xl mx-auto w-full px-6 sm:px-10 lg:px-16 pt-32 lg:pt-40 pb-10">
+        <div className="relative z-10 flex-1 grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-0 max-w-7xl mx-auto w-full px-6 sm:px-10 lg:px-16 pt-32 lg:pt-40 pb-20 lg:pb-10">
 
           {/* ── LEFT: Text content ── */}
           <div className="flex flex-col justify-start pr-0 lg:pr-16 pt-4 pb-8">
@@ -284,14 +284,14 @@ export default function Hero() {
           </div>
 
           {/* ── RIGHT: Breathing mandala + image ── */}
-          <div className="relative hidden lg:flex items-center justify-center">
+          <div className="relative flex lg:flex items-center justify-center mt-16 lg:mt-0">
 
             {/* image frame */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.2, delay: 0.5, ease: [0.22,1,0.36,1] }}
-              className="relative w-[340px] h-[420px] image-frame overflow-hidden"
+              className="relative w-full max-w-[340px] aspect-[4/5] image-frame overflow-hidden"
             >
               <Image
                 src="/images/hero/img7.jpeg"
