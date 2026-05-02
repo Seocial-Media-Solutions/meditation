@@ -77,7 +77,7 @@ export default function MeditationHeader() {
                     width={200} 
                     height={70} 
                     className={`w-auto object-contain transition-all duration-500 ${
-                      isScrolled ? 'h-8 md:h-10' : 'h-10 md:h-14'
+                      isScrolled ? 'h-12 md:h-14' : 'h-16 md:h-20'
                     }`}
                     priority 
                   />
