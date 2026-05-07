@@ -94,7 +94,7 @@ export default function TeacherSection() {
                 transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
                 className="text-center p-4 bg-white rounded-lg border border-gray-200 shadow-sm"
               >
-                <div className="text-3xl font-light text-gray-800 mb-1">40+</div>
+                <div className="text-3xl font-light text-gray-800 mb-1">10+</div>
                 <div className="text-sm text-gray-600">Years of Practice</div>
               </motion.div>
               <motion.div

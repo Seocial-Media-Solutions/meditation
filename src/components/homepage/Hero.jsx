@@ -1,332 +1,209 @@
 'use client';
-import Image from 'next/image';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { useState, useEffect, useRef } from 'react';
-import JourneyOptions from './JourneyOptions';
-import { ArrowUpRight, Sparkles } from 'lucide-react';
-
-/* ── Word-by-word reveal ── */
-function SplitText({ text, className, delay = 0 }) {
-  const words = text.split(' ');
-  return (
-    <span className={className} aria-label={text}>
-      {words.map((word, i) => (
-        <span key={i} style={{ display: 'inline-block', overflow: 'hidden', marginRight: '0.28em' }}>
-          <motion.span
-            style={{ display: 'inline-block' }}
-            initial={{ y: '110%', opacity: 0 }}
-            animate={{ y: '0%', opacity: 1 }}
-            transition={{
-              duration: 0.75,
-              ease: [0.22, 1, 0.36, 1],
-              delay: delay + i * 0.09,
-            }}
-          >
-            {word}
-          </motion.span>
-        </span>
-      ))}
-    </span>
-  );
-}
-
-/* ── Breathing concentric rings ── */
-function BreathingMandala() {
-  const rings = [
-    { scale: [1, 1.18, 1], opacity: [0.7, 0.2, 0.7], dur: 4.5, delay: 0,    size: 'min(90vw, 360px)' },
-    { scale: [1, 1.22, 1], opacity: [0.5, 0.12, 0.5], dur: 4.5, delay: 0.4, size: 'min(75vw, 290px)' },
-    { scale: [1, 1.28, 1], opacity: [0.35, 0.08, 0.35], dur: 4.5, delay: 0.8, size: 'min(60vw, 220px)' },
-    { scale: [1, 1.35, 1], opacity: [0.2, 0.05, 0.2], dur: 4.5, delay: 1.2, size: 'min(45vw, 150px)' },
-  ];
-
-  return (
-    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-      {rings.map((r, i) => (
-        <motion.div
-          key={i}
-          className="absolute rounded-full border"
-          style={{
-            width: r.size,
-            height: r.size,
-            borderColor: 'rgba(199,220,73,0.55)',
-          }}
-          animate={{ scale: r.scale, opacity: r.opacity }}
-          transition={{ duration: r.dur, repeat: Infinity, ease: 'easeInOut', delay: r.delay }}
-        />
-      ))}
-      {/* centre glow */}
-      <motion.div
-        className="absolute rounded-full"
-        style={{ width: 90, height: 90, background: 'radial-gradient(circle, rgba(199,220,73,0.35) 0%, transparent 70%)' }}
-        animate={{ scale: [1, 1.4, 1], opacity: [0.6, 1, 0.6] }}
-        transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
-      />
-
-    </div>
-  );
-}
-
-/* ── Floating particles ── */
-function Particles({ count = 30 }) {
-  const [particles, setParticles] = useState([]);
-  useEffect(() => {
-    setParticles(Array.from({ length: count }).map((_, i) => ({
-      id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: Math.random() * 2.5 + 0.8,
-      dur: Math.random() * 14 + 10,
-      dy: -(Math.random() * 60 + 30),
-      delay: Math.random() * 8,
-    })));
-  }, []);
-
-  return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden">
-      {particles.map((p) => (
-        <motion.div
-          key={p.id}
-          className="absolute rounded-full bg-[#C7DC49]"
-          style={{ width: p.size, height: p.size, left: `${p.x}%`, top: `${p.y}%` }}
-          animate={{ y: [0, p.dy, 0], opacity: [0, 0.6, 0] }}
-          transition={{ duration: p.dur, repeat: Infinity, ease: 'easeInOut', delay: p.delay }}
-        />
-      ))}
-    </div>
-  );
-}
-
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { ArrowUpRight, Sparkles, Calendar } from 'lucide-react';
 
 export default function Hero() {
-  const [isJourneyOpen, setIsJourneyOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
-  useEffect(() => { setMounted(true); }, []);
+  
+  useEffect(() => { 
+    setMounted(true); 
+  }, []);
+
+  if (!mounted) return null; 
 
   return (
     <>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
-        .cta-primary {
-          background: linear-gradient(135deg, #C7DC49, #9db832);
-          transition: all 0.4s cubic-bezier(0.22,1,0.36,1);
+        .bg-zen-soft {
+          background-color: #F2F4EB; 
+          background-image: 
+            radial-gradient(circle at 75% 25%, rgba(199, 220, 73, 0.15) 0%, transparent 60%),
+            radial-gradient(circle at 25% 75%, rgba(220, 224, 210, 0.8) 0%, transparent 50%);
         }
-        .cta-primary:hover {
-          transform: translateY(-3px) scale(1.03);
-          box-shadow: 0 12px 48px rgba(199,220,73,0.45);
-        }
-        .cta-text {
-          transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
-        }
-        .cta-text:hover { color: #C7DC49; letter-spacing: 0.08em; }
-        .cta-text:hover .cta-arrow { transform: translate(3px,-3px); }
-        .cta-arrow { transition: transform 0.3s ease; }
 
-        .vertical-text {
-          writing-mode: vertical-rl;
-          text-orientation: mixed;
+        .hero-gradient {
+          background: linear-gradient(135deg, #C7DC49, #d4e066);
+          transition: all 0.3s cubic-bezier(0.22,1,0.36,1);
         }
-        .image-frame {
-          clip-path: polygon(0 6%, 94% 0, 100% 94%, 6% 100%);
+        .hero-gradient:hover {
+          transform: translateY(-2px) scale(1.02);
+          box-shadow: 0 15px 35px rgba(199, 220, 73, 0.4);
+        }
+
+        .btn-outline {
+          background: transparent;
+          border: 1px solid rgba(15, 23, 42, 0.15); 
+          color: #334155; 
+          transition: all 0.3s ease;
+        }
+        .btn-outline:hover {
+          background: rgba(199, 220, 73, 0.15);
+          border-color: #9cb32d;
+          color: #3b4711;
+        }
+
+        .glass-card {
+          background: rgba(255, 255, 255, 0.65);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          border: 1px solid rgba(255, 255, 255, 0.8);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .highlight-text {
+          background: linear-gradient(135deg, #8ba125, #abc233);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-shadow: 0 0 25px rgba(199, 220, 73, 0.4);
+        }
+
+        .lotus-petal {
+          position: absolute;
+          border: 1px solid rgba(139, 161, 37, 0.35); 
+          border-radius: 50% 0 50% 0;
+          box-shadow: inset 0 0 20px rgba(199, 220, 73, 0.15), 0 0 15px rgba(199, 220, 73, 0.1);
+          transform-origin: bottom right;
         }
       `}</style>
 
-      <section className="relative w-full min-h-screen bg-[#F7F8ED] overflow-hidden flex flex-col" style={{ fontFamily: 'Inter, sans-serif' }}>
+      {/* Added pt-32 on mobile and pt-40 on desktop to push the content safely below the header */}
+      <section className="relative w-full min-h-screen overflow-hidden bg-zen-soft font-['Inter'] flex items-center pt-32 lg:pt-40 pb-16 lg:pb-16">
         
-        {/* Background Layers with Feathered Mask */}
-        <div 
-          className="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-[#080a06]"
-          style={{ 
-            maskImage: 'linear-gradient(to bottom, black 0%, black 92%, transparent 100%)',
-            WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 92%, transparent 100%)'
-          }}
-        >
-          {/* BG image */}
-          <Image
-            src="/images/hero/hero5.jpeg"
-            alt="Meditation"
-            fill priority
-            className="object-cover object-center opacity-35"
-            quality={90}
-          />
-          {/* radial vignette */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_100%_at_50%_50%,transparent_60%,#080a06_70%)]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#080a06]/30 via-transparent to-[#080a06]/10" />
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }}></div>
 
-          {/* Animated Bottom Shade */}
-          <motion.div 
-            className="absolute inset-0"
-            animate={{ 
-              background: [
-                'linear-gradient(to top, rgba(8,10,6,0.4) 0%, transparent 8%)',
-                'linear-gradient(to top, rgba(16,85,31,0.05) 0%, transparent 12%)',
-                'linear-gradient(to top, rgba(8,10,6,0.4) 0%, transparent 8%)'
-              ]
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          />
-        </div>
-
-        {/* floating particles */}
-        {mounted && <Particles count={28} />}
-
-        {/* ──────────── MAIN CONTENT GRID ──────────── */}
-        <div className="relative z-10 flex-1 grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-0 max-w-7xl mx-auto w-full px-6 sm:px-10 lg:px-16 pt-32 lg:pt-40 pb-20 lg:pb-10">
-
-          {/* ── LEFT: Text content ── */}
-          <div className="flex flex-col justify-start pr-0 lg:pr-16 pt-4 pb-8">
-
-
-
-            {/* Label with pulse dot */}
+        <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
+          
+          <div className="flex-1 w-full z-20 flex flex-col items-center text-center lg:items-start lg:text-left">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="flex items-center gap-3 mb-8"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             >
-              <motion.span
-                className="w-2 h-2 rounded-full bg-[#C7DC49]"
-                animate={{ scale: [1, 1.6, 1], opacity: [1, 0.4, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
-              <span className="text-[#C7DC49]/80 text-xs tracking-[0.3em] uppercase font-light">
-                Begin Your Journey
-              </span>
+              <h1 className="font-['Cinzel'] font-normal text-slate-800 leading-[1.15] mb-6"
+                  style={{ fontSize: 'clamp(2rem, 4.5vw, 4.5rem)' }}>
+                MEDITATION FOR INNER<br className="hidden sm:block" />
+                PEACE, BALANCE &amp;<br />
+                <span className="highlight-text font-bold">TRANSFORMATION</span>
+              </h1>
             </motion.div>
 
-            {/* ── HEADLINE ── */}
-            <div className="mb-8 overflow-visible">
-              <h1
-                className="font-['Cinzel'] font-semibold text-white leading-[1.1] tracking-wide"
-                style={{ fontSize: 'clamp(2rem, 4.5vw, 4rem)' }}
-              >
-                <SplitText text="Meditation" delay={0.2} className="block text-white" />
-                <SplitText text="for Inner Peace," delay={0.45} className="block text-white/90" />
-                <div style={{ display: 'block' }}>
-                  <span style={{ display: 'inline-block', overflow: 'hidden', marginRight: '0.28em' }}>
-                    <motion.span
-                      style={{ display: 'inline-block' }}
-                      initial={{ y: '110%', opacity: 0 }}
-                      animate={{ y: '0%', opacity: 1 }}
-                      transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1], delay: 0.9 }}
-                    >
-                      Balance &amp;
-                    </motion.span>
-                  </span>
-                </div>
-                <div style={{ display: 'block' }}>
-                  <span style={{ display: 'inline-block', overflow: 'hidden' }}>
-                    <motion.span
-                      style={{
-                        display: 'inline-block',
-                        background: 'linear-gradient(100deg,#C7DC49,#e8f590)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        backgroundClip: 'text',
-                      }}
-                      initial={{ y: '110%', opacity: 0 }}
-                      animate={{ y: '0%', opacity: 1 }}
-                      transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1], delay: 1.05 }}
-                    >
-                      Transformation
-                    </motion.span>
-                  </span>
-                </div>
-              </h1>
-            </div>
-
-            {/* Divider */}
-            <motion.div
-              initial={{ scaleX: 0, opacity: 0 }}
-              animate={{ scaleX: 1, opacity: 1 }}
-              transition={{ duration: 0.9, delay: 1.2, ease: [0.22,1,0.36,1] }}
-              style={{ originX: 0, background: 'linear-gradient(90deg, #C7DC49, transparent)', height: '1px', width: '6rem', marginBottom: '1.75rem' }}
-            />
-
-            {/* Subtext */}
             <motion.p
-              initial={{ opacity: 0, y: 18 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.3, ease: 'easeOut' }}
-              className="text-white/55 font-light leading-7 mb-12 max-w-xl"
-              style={{ fontSize: 'clamp(0.9rem, 1.6vw, 1.05rem)' }}
+              transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              className="text-slate-600 text-base sm:text-lg md:text-xl font-light leading-relaxed mb-10 max-w-xl"
             >
-              Discover a gentle yet powerful practice that restores inner balance,
-              awakens joy, expands awareness, and nurtures a deeply peaceful life —
-              within and beyond.
+              Discover a transformative journey that brings inner peace, mental clarity, and spiritual awakening through ancient meditation practices adapted for modern life.
             </motion.p>
 
-            {/* CTAs */}
             <motion.div
-              initial={{ opacity: 0, y: 18 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.5 }}
-              className="flex flex-col sm:flex-row items-start sm:items-center gap-6"
+              transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto items-center justify-center lg:justify-start"
             >
-              <Link
-                href="/start-journey"
-                className="cta-primary inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-black font-semibold text-sm"
-              >
-                <Sparkles size={15} className="opacity-70" />
-                Start Your Meditation Journey
+              <Link href="/start-journey" className="hero-gradient flex items-center justify-center gap-3 px-8 py-4 rounded-full text-black font-semibold text-[15px] tracking-wide w-full sm:w-auto">
+                <Sparkles size={18} />
+                Start Your Journey
               </Link>
 
-              <button
-                onClick={() => setIsJourneyOpen(true)}
-                className="cta-text group inline-flex items-center gap-2 text-white/50 text-sm font-light tracking-wide border-none bg-transparent cursor-pointer"
-              >
+              <button className="btn-outline flex items-center justify-center gap-2 px-8 py-4 rounded-full font-medium text-[15px] tracking-wide w-full sm:w-auto">
                 Explore More
-                <ArrowUpRight size={15} className="cta-arrow" />
+                <ArrowUpRight size={18} className="opacity-80" />
               </button>
             </motion.div>
           </div>
 
-          {/* ── RIGHT: Breathing mandala + image ── */}
-          <div className="relative flex lg:flex items-center justify-center mt-16 lg:mt-0">
-
-            {/* image frame */}
+          <div className="flex-1 w-full relative flex flex-col items-center justify-center lg:justify-end z-10 mt-8 lg:mt-0">
+            
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, delay: 0.5, ease: [0.22,1,0.36,1] }}
-              className="relative w-full max-w-[340px] aspect-[4/5] image-frame overflow-hidden"
+              transition={{ duration: 1.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="relative flex items-center justify-center w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[450px] lg:h-[450px] scale-[0.75] sm:scale-90 lg:scale-100"
             >
-              <Image
-                src="/images/hero/img7.jpeg"
-                alt="Meditation"
-                fill
-                className="object-cover object-center brightness-75"
-                quality={88}
+              <div className="absolute w-full h-full bg-[#C7DC49]/20 rounded-full blur-[70px]" />
+
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
+                className="relative w-[240px] h-[240px] flex items-center justify-center"
+              >
+                {[...Array(8)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="lotus-petal w-[120px] h-[120px] origin-bottom-right"
+                    style={{
+                      top: 0,
+                      left: 0,
+                      transform: `rotate(${i * 45}deg)`,
+                    }}
+                    animate={{ 
+                      scale: [1, 1.1, 1],
+                      opacity: [0.6, 1, 0.6]
+                    }}
+                    transition={{ 
+                      duration: 6, 
+                      repeat: Infinity, 
+                      ease: "easeInOut",
+                      delay: i * 0.2
+                    }}
+                  />
+                ))}
+              </motion.div>
+
+              <motion.div 
+                className="absolute w-[320px] h-[320px] rounded-full border border-[#8ba125]/20"
+                animate={{ rotate: -360, scale: [1, 1.05, 1] }}
+                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
               />
-              {/* inner overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#080a06]/60 via-transparent to-transparent" />
+              <motion.div 
+                className="absolute w-[400px] h-[400px] rounded-full border border-[#8ba125]/15 border-dashed"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+              />
+
+              <motion.div 
+                animate={{ scale: [0.95, 1.1, 0.95] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute w-16 h-16 rounded-full bg-white/80 backdrop-blur-md border border-[#8ba125]/40 shadow-[0_0_30px_rgba(199,220,73,0.4)] flex items-center justify-center"
+              >
+                <div className="w-4 h-4 rounded-full bg-[#8ba125] shadow-[0_0_15px_#8ba125]" />
+              </motion.div>
             </motion.div>
 
-            {/* Breathing mandala on top */}
-            <BreathingMandala />
-
-            {/* Floating tag */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 1.6 }}
-              className="absolute bottom-10 left-0 bg-white/6 backdrop-blur-xl border border-white/10 rounded-2xl px-5 py-4"
+              transition={{ duration: 1, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              className="glass-card relative lg:absolute mt-0 sm:mt-4 lg:mt-0 bottom-auto lg:bottom-[5%] right-auto lg:-right-4 rounded-2xl p-6 w-[90%] max-w-[320px] lg:min-w-[260px] lg:w-auto z-30"
             >
-              <p className="text-[10px] tracking-[0.25em] uppercase text-white/35 mb-1">Daily Practice</p>
-              <p className="text-white text-sm font-light">Free · Every Week</p>
-              <div className="flex items-center gap-1.5 mt-2">
-                {['#a0c030','#b8d445','#C7DC49'].map((c,i) => (
-                  <div key={i} className="w-6 h-6 rounded-full border-2 border-[#080a06]" style={{ background: c, marginLeft: i > 0 ? '-8px' : 0 }} />
-                ))}
-                <span className="text-white/40 text-xs ml-1">+10k joined</span>
+              <div className="flex items-center gap-2 mb-4">
+                <Calendar size={16} className="text-[#8ba125]" />
+                <span className="text-xs text-slate-500 uppercase tracking-widest font-bold">Daily Practice</span>
+              </div>
+              
+              <p className="text-slate-800 text-[15px] font-semibold mb-5">Free · Every Week</p>
+              
+              <div className="flex items-center gap-3">
+                <div className="flex -space-x-3">
+                  {[1, 2, 3].map((_, i) => (
+                    <div key={i} className="relative w-9 h-9 rounded-full border-2 border-white bg-[#f8f9f2] flex items-center justify-center shadow-sm">
+                      <div className="w-full h-full rounded-full bg-gradient-to-br from-[#C7DC49]/60 to-transparent" />
+                    </div>
+                  ))}
+                </div>
+                <span className="text-slate-500 text-xs font-semibold ml-2">+10k joined</span>
               </div>
             </motion.div>
+
           </div>
         </div>
-
-        <JourneyOptions isOpen={isJourneyOpen} onClose={() => setIsJourneyOpen(false)} />
       </section>
     </>
   );
