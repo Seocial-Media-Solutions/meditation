@@ -40,13 +40,13 @@ export default function IntroductionSection() {
         </motion.h2>
 
         {/* Content */}
-        <div className="text-center text-gray-600 space-y-6">
+        <div className="text-center text-gray-600 space-y-6 text-2xl">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="text-lg md:text-xl leading-relaxed italic font-medium"
+            className="text-2xl md:text-3xl leading-relaxed italic font-medium"
           >
             Turn inward. Meditate. In today’s fast-paced, outward-driven world, this has become the need of the hour.
           </motion.p>
@@ -56,7 +56,7 @@ export default function IntroductionSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-            className="text-lg md:text-xl leading-relaxed"
+            className="text-2xl md:text-3xl leading-relaxed"
           >
             It has been over forty years since I first experienced the profound stillness of deep meditation. As a shy teenager growing up in the French suburbs of Geneva, I was introduced to Sahaja Yoga meditation by one of my high-school teachers, a colleague of my mother.
           </motion.p>
@@ -66,7 +66,7 @@ export default function IntroductionSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-            className="text-lg md:text-xl leading-relaxed"
+            className="text-2xl md:text-3xl leading-relaxed"
           >
             The effects were immediate and tangible — better sleep, sharper attention, and a quiet inner joy. What began as curiosity soon became a lifelong practice. I have never stopped since.
           </motion.p>
@@ -76,7 +76,7 @@ export default function IntroductionSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
-            className="text-lg md:text-xl leading-relaxed"
+            className="text-2xl md:text-3xl leading-relaxed"
           >
             Over the years, this practice has revealed layers of beauty, balance, and inner freedom — experiences too precious not to share.
           </motion.p>
@@ -86,7 +86,7 @@ export default function IntroductionSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-            className="text-lg md:text-xl leading-relaxed pt-4"
+            className="text-2xl md:text-3xl leading-relaxed pt-4"
           >
             <p className="mb-4 font-serif text-[#1A2E05]">This space exists as:</p>
             <ul className="space-y-2 inline-block text-left">

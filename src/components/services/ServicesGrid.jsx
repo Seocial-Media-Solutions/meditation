@@ -80,22 +80,6 @@ const services = [
             "In-person experience"
         ],
         color: "from-pink-500 to-rose-600"
-    },
-    {
-        id: 5,
-        title: "Sacred Arts Exploration",
-        description: "Inner journey experiences integrating meditation with expressive arts, such as dance and self-exploration.",
-        icon: Sunrise,
-        image: "/images/service-chakra.jpg",
-        duration: "Varies",
-        level: "All Levels",
-        features: [
-            "Meditative dance",
-            "Self-exploration",
-            "Expressive arts",
-            "Deep healing"
-        ],
-        color: "from-orange-500 to-amber-600"
     }
 ];
 
@@ -145,7 +129,7 @@ export default function ServicesGrid() {
                     <h2 className="text-4xl md:text-5xl font-serif text-[#1A2E05] mb-6">
                         The Ultimate Return on Investment
                     </h2>
-                    <p className="text-lg text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
+                    <p className="text-4xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
                         Meditation deeply anchors us in the present moment, offering profound peace, joy, and clarity. Whether you are an experienced meditation enthusiast seeking like-minded peers, someone simply curious about the benefits, or even a healthy skeptic, I welcome the opportunity to connect.
                     </p>
                 </motion.div>
@@ -190,7 +174,7 @@ export default function ServicesGrid() {
                                         {service.title}
                                     </h3>
 
-                                    <p className="text-gray-600 mb-4 leading-relaxed font-light">
+                                    <p className="text-gray-600 mb-4 leading-relaxed font-light text-2xl">
                                         {service.description}
                                     </p>
 
@@ -209,7 +193,7 @@ export default function ServicesGrid() {
                                     {/* Features List */}
                                     <div className="space-y-2 mb-6">
                                         {service.features.slice(0, 3).map((feature, index) => (
-                                            <div key={index} className="flex items-start gap-2 text-sm text-gray-600">
+                                            <div key={index} className="flex items-start gap-2 text-4xl text-gray-600">
                                                 <CheckCircle className="w-4 h-4 text-[#C7DC49] mt-0.5 flex-shrink-0" />
                                                 <span className="font-light">{feature}</span>
                                             </div>

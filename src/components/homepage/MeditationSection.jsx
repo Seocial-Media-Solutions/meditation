@@ -40,7 +40,7 @@ export default function MeditationSection() {
             </motion.h2>
           </div>
 
-          <div className="space-y-6 text-gray-600 leading-relaxed">
+          <div className="space-y-6 text-gray-600 leading-relaxed text-2xl">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

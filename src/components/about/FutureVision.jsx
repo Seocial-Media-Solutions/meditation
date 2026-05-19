@@ -97,7 +97,7 @@ export default function FutureVision() {
                             transition={{ duration: 0.6, delay: 1.0, ease: "easeOut" }}
                             className="max-w-2xl mx-auto border-t border-white/10 pt-8"
                         >
-                            <p className="text-lg text-gray-300 font-light italic">
+                            <p className="text-2xl md:text-3xl text-gray-300 font-light italic">
                                 "This is how meditation quietly contributes to a more peaceful, conscious, and sustainable world."
                             </p>
                         </motion.div>

@@ -86,7 +86,7 @@ export default function HealingSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-              className="text-gray-600 leading-relaxed text-lg"
+              className="text-gray-600 leading-relaxed text-4xl"
             >
               Research and real-life experiences have shown meditation to be a powerful
               complementary approach for wellbeing. It supports the body's natural healing

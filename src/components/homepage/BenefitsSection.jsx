@@ -64,7 +64,7 @@ export default function BenefitsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="text-lg text-gray-600 max-w-2xl mx-auto"
+            className="text-4xl text-gray-600 max-w-2xl mx-auto"
           >
             Meditation gently supports holistic wellbeing by working at the level of the nervous system and awareness.
           </motion.p>
@@ -92,7 +92,7 @@ export default function BenefitsSection() {
                   />
                 </div>
               </div>
-              <p className="text-gray-600 max-w-sm mx-auto lg:mx-0">
+              <p className="text-gray-600 max-w-sm mx-auto lg:mx-0 text-2xl">
                 {benefits.topLeft.description}
               </p>
             </motion.div>
@@ -115,7 +115,7 @@ export default function BenefitsSection() {
                   />
                 </div>
               </div>
-              <p className="text-gray-600 max-w-sm mx-auto lg:mx-0">
+              <p className="text-gray-600 max-w-sm mx-auto lg:mx-0 text-2xl">
                 {benefits.bottomLeft.description}
               </p>
             </motion.div>
@@ -145,9 +145,9 @@ export default function BenefitsSection() {
 
               {/* Static Girl Image on Top */}
               <div className="absolute inset-0 flex items-center justify-center z-10">
-                <div className="relative w-[70%] h-[93%]">
+                <div className="relative w-[80%] h-[105%]">
                   <Image
-                    src="/images/yoga-girl.png"
+                    src="/images/girl-meditation.png"
                     alt="Meditation Pose"
                     fill
                     className="object-contain"
@@ -178,7 +178,7 @@ export default function BenefitsSection() {
                 </div>
                 <h3 className="text-xl font-medium text-[#1A2E05]">{benefits.topRight.title}</h3>
               </div>
-              <p className="text-gray-600 max-w-sm mx-auto lg:mx-0">
+              <p className="text-gray-600 max-w-sm mx-auto lg:mx-0 text-2xl">
                 {benefits.topRight.description}
               </p>
             </motion.div>
@@ -201,7 +201,7 @@ export default function BenefitsSection() {
                 </div>
                 <h3 className="text-xl font-medium text-[#1A2E05]">{benefits.bottomRight.title}</h3>
               </div>
-              <p className="text-gray-600 max-w-sm mx-auto lg:mx-0">
+              <p className="text-gray-600 max-w-sm mx-auto lg:mx-0 text-2xl">
                 {benefits.bottomRight.description}
               </p>
             </motion.div>
@@ -227,7 +227,7 @@ export default function BenefitsSection() {
             </div>
             <h3 className="text-xl font-medium text-[#1A2E05]">{benefits.bottomCenter.title}</h3>
           </div>
-          <p className="text-gray-600 max-w-md mx-auto">
+          <p className="text-gray-600 max-w-md mx-auto text-2xl">
             {benefits.bottomCenter.description}
           </p>
         </motion.div>

@@ -135,7 +135,7 @@ export default async function SingleBlogPage({ params }) {
             <h1 className="text-4xl font-serif text-gray-900 mb-6">
               Blog Not Found
             </h1>
-            <p className="text-gray-600 mb-8 max-w-md mx-auto">
+            <p className="text-gray-600 mb-8 max-w-md mx-auto text-2xl">
               We couldn't find the blog you're looking for. It may have been moved or removed.
             </p>
             <Link

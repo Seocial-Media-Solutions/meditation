@@ -53,7 +53,7 @@ export default function WhyMeditation() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false }}
                         transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-                        className="text-lg text-gray-600 leading-relaxed mb-8 text-center"
+                        className="text-4xl text-gray-600 leading-relaxed mb-8 text-center"
                     >
                         Modern life brings unprecedented convenience — yet also stress, disconnection, and dissatisfaction. Meditation offers a natural counterbalance by:
                     </motion.p>
@@ -81,7 +81,7 @@ export default function WhyMeditation() {
                         transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
                         className="text-center pt-8 border-t border-gray-100"
                     >
-                        <p className="text-lg font-medium text-[#1A2E05]">
+                        <p className="text-2xl md:text-3xl font-medium text-[#1A2E05]">
                             More importantly, it helps individuals rediscover a sense of meaning, contentment, and connection that no external achievement alone can provide.
                         </p>
                     </motion.div>

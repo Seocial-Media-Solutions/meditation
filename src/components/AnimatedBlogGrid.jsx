@@ -218,7 +218,7 @@ export default function AnimatedBlogGrid({ blogs }) {
             <Sparkles className="w-8 h-8 text-[#C7DC49] ml-3" />
           </motion.div>
           <motion.p
-            className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed"
+            className="text-3xl md:text-4xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed"
             variants={subtitleVariants}
           >
             Explore transformative teachings on meditation, mindfulness, and the journey within
@@ -319,7 +319,7 @@ export default function AnimatedBlogGrid({ blogs }) {
                     </motion.h2>
 
                     <motion.p
-                      className="text-gray-600 mb-5 line-clamp-3 leading-relaxed font-light"
+                      className="text-gray-600 mb-5 line-clamp-3 leading-relaxed font-light text-2xl"
                       itemProp="description"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}

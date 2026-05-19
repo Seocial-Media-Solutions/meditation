@@ -19,7 +19,7 @@ export default function ContactPage() {
                         <h1 className="text-4xl md:text-6xl font-serif text-[#1A2E05] mb-6">
                             Start Your Journey Today
                         </h1>
-                        <p className="text-lg text-gray-500 max-w-2xl mx-auto font-light leading-relaxed">
+                        <p className="text-2xl md:text-3xl text-gray-500 max-w-2xl mx-auto font-light leading-relaxed">
                             Have questions about our sessions, workshops, or retreats? 
                             Reach out to us and we'll help you find the right path for your practice.
                         </p>
@@ -56,7 +56,7 @@ export default function ContactPage() {
                             </div>
                             <div className="space-y-2">
                                 <label className="text-sm font-medium text-[#1A2E05]/70 ml-1">Subject</label>
-                                <select className="w-full bg-white border border-[#C7DC49]/30 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C7DC49]/50 transition-all font-light text-gray-600">
+                                <select className="w-full bg-white border border-[#C7DC49]/30 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#C7DC49]/50 transition-all font-light text-gray-600 text-2xl">
                                     <option>General Inquiry</option>
                                     <option>Book a Session</option>
                                     <option>Corporate Program</option>

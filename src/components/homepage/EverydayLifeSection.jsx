@@ -77,7 +77,7 @@ export default function EverydayLifeSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="text-gray-600 text-lg leading-relaxed"
+            className="text-gray-600 text-4xl leading-relaxed"
           >
             This meditation practice supports all aspects of daily living:
           </motion.p>
@@ -112,7 +112,7 @@ export default function EverydayLifeSection() {
               </h4>
 
               {/* Description */}
-              <p className="text-gray-600 text-center text-sm leading-relaxed">
+              <p className="text-gray-600 text-center text-4xl leading-relaxed">
                 {aspect.description}
               </p>
             </motion.div>

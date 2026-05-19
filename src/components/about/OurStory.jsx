@@ -31,7 +31,7 @@ export default function OurStory() {
                             About the Author
                         </motion.h2>
 
-                        <div className="space-y-6 text-lg text-gray-600 font-light leading-relaxed">
+                        <div className="space-y-6 text-4xl text-gray-600 font-light leading-relaxed">
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}

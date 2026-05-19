@@ -96,7 +96,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="text-slate-600 text-base sm:text-lg md:text-xl font-light leading-relaxed mb-10 max-w-xl"
+              className="text-slate-600 text-4xl sm:text-4xl md:text-3xl font-light leading-relaxed mb-10 max-w-xl"
             >
               Discover a transformative journey that brings inner peace, mental clarity, and spiritual awakening through ancient meditation practices adapted for modern life.
             </motion.p>
@@ -107,7 +107,7 @@ export default function Hero() {
               transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
               className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto items-center justify-center lg:justify-start"
             >
-              <Link href="/start-journey" className="hero-gradient flex items-center justify-center gap-3 px-8 py-4 rounded-full text-black font-semibold text-[15px] tracking-wide w-full sm:w-auto">
+              <Link href="/services" className="hero-gradient flex items-center justify-center gap-3 px-8 py-4 rounded-full text-black font-semibold text-[15px] tracking-wide w-full sm:w-auto">
                 <Sparkles size={18} />
                 Start Your Journey
               </Link>

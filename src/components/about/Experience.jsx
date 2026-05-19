@@ -37,7 +37,7 @@ export default function Experience() {
                     </motion.h3>
                 </div>
 
-                <div className="text-xl text-gray-600 leading-loose font-light space-y-8">
+                <div className="text-3xl text-gray-600 leading-loose font-light space-y-8">
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}

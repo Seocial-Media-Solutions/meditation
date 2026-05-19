@@ -66,7 +66,7 @@ export default function TeacherSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
                 transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-                className="text-gray-600 leading-relaxed text-lg"
+                className="text-gray-600 leading-relaxed text-4xl"
               >
                 With <span className="font-medium text-[#1A2E05]">40 years of personal practice and global experience</span>, the journey behind this work is
                 rooted in authenticity, sincerity, and lived experience rather than theory.
@@ -77,7 +77,7 @@ export default function TeacherSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
                 transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-                className="text-gray-600 leading-relaxed text-lg"
+                className="text-gray-600 leading-relaxed text-4xl"
               >
                 From early exposure to meditation in <span className="font-medium text-[#1A2E05]">Europe</span> to
                 deep immersion in <span className="font-medium text-[#1A2E05]">India</span>, this path has
@@ -95,7 +95,7 @@ export default function TeacherSection() {
                 className="text-center p-4 bg-white rounded-lg border border-gray-200 shadow-sm"
               >
                 <div className="text-3xl font-light text-gray-800 mb-1">10+</div>
-                <div className="text-sm text-gray-600">Years of Practice</div>
+                <div className="text-4xl text-gray-600">Years of Practice</div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -105,7 +105,7 @@ export default function TeacherSection() {
                 className="text-center p-4 bg-white rounded-lg border border-gray-200 shadow-sm"
               >
                 <div className="text-3xl font-light text-gray-800 mb-1">Global</div>
-                <div className="text-sm text-gray-600">Experience</div>
+                <div className="text-4xl text-gray-600">Experience</div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -115,7 +115,7 @@ export default function TeacherSection() {
                 className="text-center p-4 bg-white rounded-lg border border-gray-200 shadow-sm"
               >
                 <div className="text-3xl font-light text-gray-800 mb-1">Authentic</div>
-                <div className="text-sm text-gray-600">Teaching</div>
+                <div className="text-4xl text-gray-600">Teaching</div>
               </motion.div>
             </div>
 

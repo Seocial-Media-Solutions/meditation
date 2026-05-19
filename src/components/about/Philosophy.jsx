@@ -43,7 +43,7 @@ export default function Philosophy() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false }}
                         transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-                        className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto"
+                        className="text-4xl text-gray-600 leading-relaxed max-w-3xl mx-auto"
                     >
                         Meditation is often seen as a personal or spiritual pursuit. While its benefits for inner peace are undeniable, its true potential goes far beyond individual wellbeing.
                     </motion.p>
@@ -63,7 +63,7 @@ export default function Philosophy() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false }}
                         transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-                        className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto"
+                        className="text-4xl text-gray-600 leading-relaxed max-w-3xl mx-auto"
                     >
                         Our vision is rooted in understanding that through meditation, awareness expands, reactions soften, and a sense of collective consciousness begins to emerge — allowing more compassionate communication, responsible leadership, and sustainable ways of living.
                     </motion.p>

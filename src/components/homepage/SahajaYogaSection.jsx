@@ -96,7 +96,7 @@ export default function SahajaYogaSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="text-lg text-gray-600 leading-relaxed"
+            className="text-4xl text-gray-600 leading-relaxed"
           >
             Sahaja Yoga meditation offers a unique approach to inner peace and self-discovery
           </motion.p>
@@ -124,7 +124,7 @@ export default function SahajaYogaSection() {
               </h4>
 
               {/* Description */}
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <p className="text-gray-600 leading-relaxed text-4xl">
                 {feature.description}
               </p>
             </motion.div>
@@ -147,7 +147,7 @@ export default function SahajaYogaSection() {
                 </svg>
               </div>
 
-              <p className="text-xl lg:text-2xl text-gray-600 font-light mb-2">
+              <p className="text-3xl lg:text-4xl text-gray-600 font-light mb-2">
                 It is not belief-based —
               </p>
               <p className="text-2xl lg:text-3xl text-[#1A2E05] font-medium">

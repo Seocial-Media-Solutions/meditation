@@ -33,7 +33,7 @@ export default function PrivacyPage() {
                             <Eye className="w-6 h-6 text-[#C7DC49]" />
                             1. Introduction
                         </h2>
-                        <p className="text-gray-600 font-light leading-relaxed">
+                        <p className="text-gray-600 font-light leading-relaxed text-2xl">
                             Welcome to our Meditation Sanctuary. We are committed to protecting your personal information and your right to privacy. This Privacy Policy outlines how we collect, use, and safeguard your data when you visit our website and engage with our services.
                         </p>
                     </section>
@@ -43,10 +43,10 @@ export default function PrivacyPage() {
                             <FileText className="w-6 h-6 text-[#C7DC49]" />
                             2. Information We Collect
                         </h2>
-                        <p className="text-gray-600 font-light leading-relaxed mb-4">
+                        <p className="text-gray-600 font-light leading-relaxed mb-4 text-2xl">
                             We collect personal information that you provide to us when you:
                         </p>
-                        <ul className="list-disc pl-6 space-y-2 text-gray-600 font-light">
+                        <ul className="list-disc pl-6 space-y-2 text-gray-600 font-light text-2xl">
                             <li>Book a meditation or yoga session</li>
                             <li>Contact us via our contact form</li>
                             <li>Subscribe to our newsletter</li>
@@ -59,10 +59,10 @@ export default function PrivacyPage() {
                             <Lock className="w-6 h-6 text-[#C7DC49]" />
                             3. How We Use Your Information
                         </h2>
-                        <p className="text-gray-600 font-light leading-relaxed">
+                        <p className="text-gray-600 font-light leading-relaxed text-2xl">
                             Your information is used to provide and improve our services, including:
                         </p>
-                        <ul className="list-disc pl-6 space-y-2 text-gray-600 font-light mt-4">
+                        <ul className="list-disc pl-6 space-y-2 text-gray-600 font-light mt-4 text-2xl">
                             <li>Scheduling and managing your bookings</li>
                             <li>Sending you updates regarding your sessions</li>
                             <li>Communicating about new workshops or special events</li>
@@ -72,7 +72,7 @@ export default function PrivacyPage() {
 
                     <section className="bg-[#F7F8ED] p-8 rounded-3xl border border-[#C7DC49]/20">
                         <h2 className="text-2xl font-serif text-[#1A2E05] mb-4">Your Trust Matters</h2>
-                        <p className="text-gray-600 font-light leading-relaxed text-sm">
+                        <p className="text-gray-600 font-light leading-relaxed text-4xl">
                             We do not sell, rent, or trade your personal information to third parties. Every detail shared with us is treated with the utmost respect and confidentiality, allowing you to focus entirely on your spiritual journey.
                         </p>
                     </section>

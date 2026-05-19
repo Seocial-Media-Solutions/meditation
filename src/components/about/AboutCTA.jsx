@@ -22,7 +22,7 @@ export default function AboutCTA() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false }}
                     transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-                    className="text-xl text-gray-600 font-light leading-relaxed"
+                    className="text-3xl text-gray-600 font-light leading-relaxed"
                 >
                     Meditation is a gentle invitation — not to escape life, but to experience it more fully. <br className="hidden md:block" />
                     Whether you seek peace, clarity, healing, or deeper understanding, the journey always begins within.

@@ -39,7 +39,7 @@ export default function ServicesCTA() {
                                 <h2 className="text-3xl md:text-4xl font-serif text-[#1A2E05] mb-6">
                                     Ready to Transform Your Life?
                                 </h2>
-                                <p className="text-gray-600 mb-8 leading-relaxed font-light">
+                                <p className="text-gray-600 mb-8 leading-relaxed font-light text-2xl">
                                     Take the first step towards inner peace and holistic wellness.
                                     Book a session with us today and experience the transformative
                                     power of meditation and yoga.
@@ -66,11 +66,11 @@ export default function ServicesCTA() {
                                 <div className="grid grid-cols-2 gap-6 pt-6 border-t border-gray-200">
                                     <div>
                                         <p className="text-3xl font-serif text-[#1A2E05] mb-1">500+</p>
-                                        <p className="text-sm text-gray-600 font-light">Happy Students</p>
+                                        <p className="text-4xl text-gray-600 font-light">Happy Students</p>
                                     </div>
                                     <div>
                                         <p className="text-3xl font-serif text-[#1A2E05] mb-1">10+</p>
-                                        <p className="text-sm text-gray-600 font-light">Years Experience</p>
+                                        <p className="text-4xl text-gray-600 font-light">Years Experience</p>
                                     </div>
                                 </div>
                             </motion.div>
@@ -151,7 +151,7 @@ export default function ServicesCTA() {
                             <Calendar className="w-6 h-6 text-[#C7DC49]" />
                         </div>
                         <h4 className="font-serif text-lg text-[#1A2E05] mb-2">Flexible Scheduling</h4>
-                        <p className="text-sm text-gray-600 font-light">
+                        <p className="text-4xl text-gray-600 font-light">
                             Book sessions at times that work for your lifestyle
                         </p>
                     </div>
@@ -161,7 +161,7 @@ export default function ServicesCTA() {
                             <Phone className="w-6 h-6 text-[#C7DC49]" />
                         </div>
                         <h4 className="font-serif text-lg text-[#1A2E05] mb-2">Expert Guidance</h4>
-                        <p className="text-sm text-gray-600 font-light">
+                        <p className="text-4xl text-gray-600 font-light">
                             Learn from experienced and certified instructors
                         </p>
                     </div>
@@ -171,7 +171,7 @@ export default function ServicesCTA() {
                             <MapPin className="w-6 h-6 text-[#C7DC49]" />
                         </div>
                         <h4 className="font-serif text-lg text-[#1A2E05] mb-2">Peaceful Space</h4>
-                        <p className="text-sm text-gray-600 font-light">
+                        <p className="text-4xl text-gray-600 font-light">
                             Practice in our serene, purpose-built sanctuary
                         </p>
                     </div>

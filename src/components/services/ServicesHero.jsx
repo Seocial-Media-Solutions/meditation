@@ -51,7 +51,7 @@ export default function ServicesHero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                    className="text-lg md:text-xl font-light max-w-3xl mx-auto leading-relaxed"
+                    className="text-2xl md:text-3xl font-light max-w-3xl mx-auto leading-relaxed"
                 >
                     Time is our most valuable and finite resource. Time is the rarest commodity; once it is gone, it never returns. Yet, over the past 40 years, dedicated meditation practitioners and volunteer coaches like myself have joyfully devoted countless hours to teaching and practicing meditation, even amidst demanding schedules.
                 </motion.p>

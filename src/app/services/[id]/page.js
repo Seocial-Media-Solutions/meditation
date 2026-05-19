@@ -93,25 +93,6 @@ const services = [
             "Sensory spiritual awakening"
         ],
         color: "from-pink-500 to-rose-600"
-    },
-    {
-        id: 5,
-        title: "Sacred Arts Exploration",
-        description: "Inner journey experiences integrating meditation with expressive arts, such as dance and self-exploration.",
-        icon: Sunrise,
-        image: "/images/service-chakra.jpg",
-        duration: "Varies",
-        level: "All Levels",
-        longDescription: "Meditation isn't just about sitting still; it's about the movement of the soul. These workshops explore the intersection of sacred arts and mindfulness. Through meditative dance, movement, and self-exploration techniques, we learn to express our inner silence and discover new layers of our being.",
-        features: [
-            "Meditative movement and dance",
-            "Self-discovery workshops",
-            "Creative spiritual expression",
-            "Emotional release through art",
-            "Guided self-exploration",
-            "Holistic heart-opening practices"
-        ],
-        color: "from-orange-500 to-amber-600"
     }
 ];
 
@@ -199,7 +180,7 @@ export default function ServiceDetailPage({ params }) {
                                         {service.features.map((feature, index) => (
                                             <div key={index} className="flex items-start gap-3">
                                                 <CheckCircle className="w-5 h-5 text-[#C7DC49] mt-1 flex-shrink-0" />
-                                                <span className="text-gray-600 font-light">{feature}</span>
+                                                <span className="text-gray-600 font-light text-2xl">{feature}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -207,7 +188,7 @@ export default function ServiceDetailPage({ params }) {
 
                                 <div className="space-y-6">
                                     <h3 className="text-2xl font-serif text-[#1A2E05]">Preparation Tips</h3>
-                                    <p className="text-gray-600 leading-relaxed font-light">
+                                    <p className="text-gray-600 leading-relaxed font-light text-2xl">
                                         To get the most out of your session, we recommend finding a quiet space where you won't be disturbed. Wear comfortable clothing and have a cushion or chair ready. A stable internet connection is required for online sessions.
                                     </p>
                                 </div>

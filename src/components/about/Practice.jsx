@@ -43,7 +43,7 @@ export default function Practice() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false }}
                         transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-                        className="text-xl text-gray-600 font-light"
+                        className="text-3xl text-gray-600 font-light"
                     >
                         Sahaja Yoga Meditation — Simple. Experiential. Effective.
                     </motion.p>
@@ -60,7 +60,7 @@ export default function Practice() {
                             className="bg-[#F7F8ED] rounded-xl p-10 border border-gray-100 text-center hover:shadow-lg transition-shadow duration-300"
                         >
                             <h3 className="text-2xl font-medium text-[#1A2E05] mb-4">{item.title}</h3>
-                            <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                            <p className="text-gray-600 leading-relaxed text-2xl">{item.desc}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -71,7 +71,7 @@ export default function Practice() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false }}
                         transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
-                        className="text-lg text-gray-600 leading-relaxed"
+                        className="text-4xl text-gray-600 leading-relaxed"
                     >
                         Among the many meditation techniques available today, this approach is based on Sahaja Yoga meditation, a method known for its simplicity and tangible results.
                     </motion.p>
@@ -80,7 +80,7 @@ export default function Practice() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false }}
                         transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-                        className="text-lg text-gray-600 leading-relaxed"
+                        className="text-4xl text-gray-600 leading-relaxed"
                     >
                         Rather than relying on effort, control, or belief, this meditation works through direct inner experience — leading to a state often described as <span className="font-semibold text-[#1A2E05]">thoughtless awareness</span>: a calm, clear, and alert state of consciousness.
                     </motion.p>

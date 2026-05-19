@@ -35,30 +35,30 @@ export default function Footer() {
 
                     {/* Column 1: Explore (Navbar Links) */}
                     <div>
-                        <h4 className="text-sm font-semibold mb-4 text-white uppercase tracking-wider">Explore</h4>
+                        <h4 className="text-xl font-semibold mb-4 text-white uppercase tracking-wider">Explore</h4>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="/" className="text-base text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
+                                <Link href="/" className="text-2xl text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
                                     Home
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/blog" className="text-base text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
+                                <Link href="/blog" className="text-2xl text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
                                     Blog
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/about" className="text-base text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
+                                <Link href="/about" className="text-2xl text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
                                     About
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/services" className="text-white/80 hover:text-white transition-colors duration-300">
+                                <Link href="/services" className="text-2xl text-white/80 hover:text-white transition-colors duration-300">
                                     What we can offer
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/faq" className="text-base text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
+                                <Link href="/faq" className="text-2xl text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
                                     FAQs
                                 </Link>
                             </li>
@@ -67,20 +67,20 @@ export default function Footer() {
 
                     {/* Column 2: Services */}
                     <div>
-                        <h4 className="text-sm font-semibold mb-4 text-white uppercase tracking-wider">What we can offer</h4>
+                        <h4 className="text-xl font-semibold mb-4 text-white uppercase tracking-wider">What we can offer</h4>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="/meditate-now" className="text-base text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
+                                <Link href="/meditate-now" className="text-2xl text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
                                     Meditate Now
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/music" className="text-base text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
+                                <Link href="/music" className="text-2xl text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
                                     Music for Meditation
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/inspiration" className="text-base text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
+                                <Link href="/inspiration" className="text-2xl text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
                                     Inspiration
                                 </Link>
                             </li>
@@ -89,15 +89,15 @@ export default function Footer() {
 
                     {/* Column 3: Contact & Legal */}
                     <div>
-                        <h4 className="text-sm font-semibold mb-4 text-white uppercase tracking-wider">Support</h4>
+                        <h4 className="text-xl font-semibold mb-4 text-white uppercase tracking-wider">Support</h4>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="/contact" className="text-base text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
+                                <Link href="/contact" className="text-2xl text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
                                     Contact Us
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/privacy" className="text-base text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
+                                <Link href="/privacy" className="text-2xl text-gray-300 font-light hover:text-[#C7DC49] transition-colors">
                                     Privacy Notice
                                 </Link>
                             </li>
@@ -127,7 +127,7 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom Copyright */}
-                <div className="mt-8 text-right text-xs text-white/40 font-light border-t border-white/10 pt-4 relative z-10">
+                <div className="mt-8 text-right text-lg text-white/40 font-light border-t border-white/10 pt-4 relative z-10">
                     <p>&copy; Copyright ©  {currentYear} | Powered by <Link href="https://www.seocialmedia.in/" target="_blank" rel="noopener noreferrer"> SEOcial Media Solutions</Link></p>
                 </div>
 
